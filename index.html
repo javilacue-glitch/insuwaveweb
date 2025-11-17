@@ -194,33 +194,35 @@
     <footer>&copy; 2025 InsuWave. Todos los derechos reservados.</footer>
 
     <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+
     <script>
-      (function () {
-        emailjs.init("wPGW0aTE-YC3YLbqC");
-      })();
+  (function () {
+    emailjs.init("wPGW0aTE-YC3YLbqC");
+  })();
 
-      const form = document.getElementById("contactoFormulario");
-      const mensaje = document.getElementById("mensaje");
+  const form = document.getElementById("contactoFormulario");
+  const mensaje = document.getElementById("mensaje");
 
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-        emailjs
-          .sendForm("automail", "mailplantilla", this)
-          .then(
-            function () {
-              mensaje.style.color = "green";
-              mensaje.textContent = "✅ Correo enviado correctamente!";
-              form.reset();
-            },
-            function (error) {
-              mensaje.style.color = "red";
-              mensaje.textContent =
-                "❌ Error al enviar el correo. Inténtalo más tarde.";
-              console.error("Error EmailJS:", error);
-            }
-          );
-      });
+    emailjs
+      .sendForm("automail", "mailplantilla", this)
+      .then(
+        function () {
+          mensaje.style.color = "green";
+          mensaje.textContent = "✅ Correo enviado correctamente!";
+          form.reset();
+        },
+        function (error) {
+          mensaje.style.color = "red";
+          mensaje.textContent = "❌ Error al enviar el correo. Inténtalo más tarde.";
+          console.error("Error EmailJS:", error);
+        }
+      );
+  });
+</script>
     </script>
   </body>
 </html>
+
