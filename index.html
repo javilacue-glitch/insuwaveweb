@@ -204,22 +204,23 @@
     </footer>
 
     <script type="module">
-      import * as emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+      import { init, sendForm } from "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js";
 
-      emailjs.init("wPGW0aTE-YC3YLbqC");
+      init("wPGW0aTE-YC3YLbqC"); // Pon aquí tu User ID o Public Key
 
       const form = document.getElementById("contactoFormulario");
       const mensaje = document.getElementById("mensaje");
 
-      form.addEventListener("submit", function(event) {
+      form.addEventListener("submit", (event) => {
         event.preventDefault();
-    
-        emailjs.sendForm("automail", "mailplantilla", this)
+
+        sendForm("automail", "mailplantilla", form)
           .then(() => {
             mensaje.style.color = "green";
             mensaje.textContent = "✅ Correo enviado correctamente!";
             form.reset();
-          }, (error) => {
+          })
+          .catch((error) => {
             mensaje.style.color = "red";
             mensaje.textContent = "❌ Error al enviar el correo. Inténtalo más tarde.";
             console.error("Error EmailJS:", error);
@@ -228,6 +229,7 @@
     </script>
   </body>
 </html>
+
 
 
 
