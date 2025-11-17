@@ -1,234 +1,90 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>InsuWave</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>InsuWave</title>
+  <style>
+    /* (estilos omitidos para acortar, pon los tuyos aquí) */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      font-size: 22px;
+      line-height: 1.6;
+    }
+    /* resto de estilos... */
 
-    <style>
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, sans-serif;
-        background-color: #f0f4f8;
-        margin: 0;
-        padding: 0;
-        color: #333;
-        font-size: 22px;
-        line-height: 1.6;
-      }
+    #mensaje {
+      font-weight: bold;
+      margin-top: 15px;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>InsuWave</h1>
+    <p>Innovación, Empatía y Seguridad</p>
+    <img src="img/logo.png" alt="Logo de InsuWave" class="logo" />
+  </header>
 
-      header {
-        background-color: #3d3838;
-        color: white;
-        text-align: center;
-        padding: 20px;
-        position: relative;
-      }
+  <main>
+    <!-- contenido omitido -->
 
-      header h1 {
-        font-size: 42px;
-        margin: 0;
-      }
+    <section>
+      <h2>Contacto</h2>
+      <form id="contactoFormulario" action="#">
+        <label for="nombre">Nombre y Apellidos:</label>
+        <input type="text" id="nombre" name="nombre" required />
 
-      header p {
-        font-size: 20px;
-        margin: 5px 0 0 0;
-      }
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required />
 
-      .logo {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 80px;
-      }
+        <input type="submit" value="Enviar" />
+      </form>
 
-      section {
-        padding: 40px;
-        text-align: center;
-      }
+      <p id="mensaje"></p>
+    </section>
+  </main>
 
-      h2 {
-        margin: 0 0 20px;
-        color: #3d3838;
-        font-size: 30px;
-      }
+  <footer>
+    &copy; 2025 InsuWave. Todos los derechos reservados.
+  </footer>
 
-      form {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        max-width: 400px;
-        margin: auto;
-      }
+  <!-- Cargar la versión clásica de EmailJS -->
+  <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+  <script>
+    emailjs.init("TU_PUBLIC_KEY_AQUI"); // Pon aquí tu public key
 
-      label {
-        display: block;
-        margin-bottom: 10px;
-        font-weight: bold;
-        font-size: 22px;
-      }
+    const form = document.getElementById("contactoFormulario");
+    const mensaje = document.getElementById("mensaje");
 
-      input {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 20px;
-      }
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-      input[type="submit"] {
-        background-color: #3d3838;
-        color: white;
-        border: none;
-        cursor: pointer;
-        margin-top: 15px;
-        font-size: 22px;
-      }
-
-      main {
-        text-align: center;
-        padding: 40px;
-      }
-
-      img {
-        width: 300px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        margin: 10px;
-      }
-
-      footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #3d3838;
-        color: white;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-      }
-
-      #mensaje {
-        color: green;
-        font-weight: bold;
-        margin-top: 15px;
-        font-size: 22px;
-      }
-
-      ul.lista-caracteristicas {
-        list-style-type: none;
-        padding: 0;
-        margin: 0 auto;
-        max-width: 600px;
-        text-align: left;
-      }
-
-      ul.lista-caracteristicas li {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>InsuWave </h1>
-      <p>Innovación, Empatía y Seguridad</p>
-      <img src="img/logo.png" alt="Logo de InsuWave" class="logo" />
-    </header>
-
-    <main>
-      <section>
-        <h2>Bienvenido a la página oficial de InsuWave.</h2>
-      </section>
-
-      <section>
-        <h2>Quiénes somos</h2>
-        <p>Somos una empresa que está iniciando y que transmitimos seguridad y confianza.</p>
-        <img src="img/equipo.png" alt="Nuestro equipo" />
-        <p>
-          <strong>Equipo de trabajo, formado por:</strong><br />
-          Luis Rozalen: Fundador y director de marketing.<br />
-          Javier Lacueva: CEO y diseñador del bolígrafo
-        </p>
-      </section>
-
-      <section id="inicio">
-        <h2>Wave 1: el bolígrafo inteligente de insulina</h2>
-        <p>Innovación para tu salud</p>
-        <p>
-          Ayudamos a los diabéticos a calcular su dosis de insulina de forma
-          automática y segura.
-        </p>
-        <img src="img/boli.png" alt="Imagen del bolígrafo inteligente" width="300" />
-      </section>
-
-      <section id="solucion">
-        <h2>Nuestra solución</h2>
-        <article>
-          <p>
-            El bolígrafo inteligente se conecta con FreeStyle Libre 2, calcula
-            la dosis y reduce errores.
-          </p>
-        </article>
-      </section>
-
-      <section id="caracteristicas">
-        <h2>Características</h2>
-        <ul class="lista-caracteristicas">
-          <li><span class="guion">-</span> Conectividad en tiempo real</li>
-          <li><span class="guion">-</span> Diseño para niños y mayores</li>
-          <li><span class="guion">-</span> Cartucho ecológico</li>
-          <li><span class="guion">-</span> Pantalla integrada</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Contacto</h2>
-        <form id="contactoFormulario" action="javascript:void(0);">
-          <label for="nombre">Nombre y Apellidos:</label>
-          <input type="text" id="nombre" name="nombre" required />
-
-          <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" required />
-
-          <input type="submit" value="Enviar" />
-        </form>
-
-        <p id="mensaje"></p>
-      </section>
-    </main>
-
-    <footer>
-      &copy; 2025 InsuWave. Todos los derechos reservados.
-    </footer>
-
-   <script type="module">
-      import * as emailjs from "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
-
-      emailjs.init("wPGW0aTE-YC3YLbqC");
-
-      const form = document.getElementById("contactoFormulario");
-      const mensaje = document.getElementById("mensaje");
-
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        emailjs.sendForm("automail", "mailplantilla", form)
-          .then(() => {
+      emailjs
+        .sendForm("automail", "mailplantilla", this) // Usa tus IDs correctos
+        .then(
+          function () {
             mensaje.style.color = "green";
             mensaje.textContent = "✅ Correo enviado correctamente!";
             form.reset();
-          })
-          .catch((error) => {
+          },
+          function (error) {
             mensaje.style.color = "red";
-            mensaje.textContent = "❌ Error al enviar el correo. Inténtalo más tarde.";
+            mensaje.textContent =
+              "❌ Error al enviar el correo. Inténtalo más tarde.";
             console.error("Error EmailJS:", error);
-          });
-      });
-    </script>
-  </body>
+          }
+        );
+    });
+  </script>
+</body>
 </html>
+
 
 
 
