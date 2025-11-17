@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+w<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -64,7 +64,8 @@
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
-
+      console.log("Submit detectado");
+      
       emailjs
         .sendForm("automail", "mailplantilla", this) // Usa tus IDs correctos
         .then(
@@ -84,6 +85,7 @@
   </script>
 </body>
 </html>
+
 
 
 
