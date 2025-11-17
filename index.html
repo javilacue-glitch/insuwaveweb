@@ -203,7 +203,7 @@
     <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
     <script>
       (function () {
-        emailjs.init("wPGW0aTE-YC3YLbqC"); 
+          emailjs.init("wPGW0aTE-YC3YLbqC"); 
       })();
 
       const form = document.getElementById("contactoFormulario");
@@ -222,13 +222,12 @@
             },
             function (error) {
               mensaje.style.color = "red";
-              mensaje.textContent =
-                "❌ Error al enviar el correo. Inténtalo más tarde.";
+              mensaje.textContent = "❌ Error al enviar el correo. Inténtalo más tarde.";
               console.error("Error EmailJS:", error);
             }
           );
       });
-    </script>  
+    </script> 
 </body>
 
 </html>
