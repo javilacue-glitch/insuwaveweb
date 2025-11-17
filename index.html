@@ -224,13 +224,14 @@
          function (error) {
            mensaje.style.color = "red";
            mensaje.textContent =
-             "❌ Error al enviar el correo: " + error.text;
+             "❌ Error: " + JSON.stringify(error);
            console.error("Error EmailJS:", error);
           }
         );
        </script>
   </body>
 </html>
+
 
 
 
