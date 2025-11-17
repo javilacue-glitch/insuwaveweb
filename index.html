@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>InsuWave</title>
-    
+
     <style>
       body {
-        font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
         background-color: #f0f4f8;
         margin: 0;
         padding: 0;
@@ -50,12 +51,12 @@
         color: #3d3838;
         font-size: 30px;
       }
-      
+
       form {
         background-color: #fff;
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         max-width: 400px;
         margin: auto;
       }
@@ -67,7 +68,7 @@
         font-size: 22px;
       }
 
-      input{
+      input {
         width: 100%;
         padding: 10px;
         margin-top: 5px;
@@ -91,10 +92,10 @@
       }
 
       img {
-       width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      margin: 10px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 10px;
       }
 
       footer {
@@ -127,44 +128,48 @@
         align-items: flex-start;
         margin-bottom: 10px;
       }
-
     </style>
   </head>
   <body>
     <header>
       <h1>InsuWave </h1>
       <p>Innovación, Empatía y Seguridad</p>
-      <img src="img/logo.png" alt="Logo de InsuWave" class="logo">
+      <img src="img/logo.png" alt="Logo de InsuWave" class="logo" />
     </header>
 
     <main>
-
       <section>
         <h2>Bienvenido a la página oficial de InsuWave.</h2>
       </section>
 
       <section>
         <h2>Quiénes somos</h2>
-        <p>Somos una empresa que esta iniciando y que transmitimos seguridad y confianza.</p>    
-        <img src="img/equipo.png" alt="Nuestro equipo">
-        <p><strong>Equipo de trabajo, formado por:</strong><br>
-          Luis Rozalen: Fundador y director de marketing.<br>
-          Javier Lacueva: CEO y diseñador del bolígrafo</p>
-      
+        <p>Somos una empresa que está iniciando y que transmitimos seguridad y confianza.</p>
+        <img src="img/equipo.png" alt="Nuestro equipo" />
+        <p>
+          <strong>Equipo de trabajo, formado por:</strong><br />
+          Luis Rozalen: Fundador y director de marketing.<br />
+          Javier Lacueva: CEO y diseñador del bolígrafo
+        </p>
       </section>
-      
+
       <section id="inicio">
         <h2>Wave 1: el bolígrafo inteligente de insulina</h2>
         <p>Innovación para tu salud</p>
-        <p>Ayudamos a los diabéticos a calcular su dosis de insulina de forma automática y segura.</p>
-        <img src="img/boli.png" alt="Imagen del bolígrafo inteligente" width="300">
+        <p>
+          Ayudamos a los diabéticos a calcular su dosis de insulina de forma
+          automática y segura.
+        </p>
+        <img src="img/boli.png" alt="Imagen del bolígrafo inteligente" width="300" />
       </section>
-
 
       <section id="solucion">
         <h2>Nuestra solución</h2>
         <article>
-          <p>El bolígrafo inteligente se conecta con FreeStyle Libre 2, calcula la dosis y reduce errores.</p>
+          <p>
+            El bolígrafo inteligente se conecta con FreeStyle Libre 2, calcula
+            la dosis y reduce errores.
+          </p>
         </article>
       </section>
 
@@ -178,53 +183,58 @@
         </ul>
       </section>
 
-
       <section>
         <h2>Contacto</h2>
         <form id="contactoFormulario" action="javascript:void(0);">
-
           <label for="nombre">Nombre y Apellidos:</label>
-          <input type="text" id="nombre" name="nombre" required>
+          <input type="text" id="nombre" name="nombre" required />
 
           <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <input type="submit" value="Enviar">
+          <input type="email" id="email" name="email" required />
+
+          <input type="submit" value="Enviar" />
         </form>
 
         <p id="mensaje"></p>
       </section>
-    </main>  
-    
+    </main>
+
     <footer>
       &copy; 2025 InsuWave. Todos los derechos reservados.
     </footer>
 
-   <script src="https://cdn.emailjs.com/sdk/latest/email.min.js"></script>
+    <!-- Carga correcta del SDK EmailJS -->
+    <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+
     <script>
-      emailjs.init("wPGW0aTE-YC3YLbqC");
+      document.addEventListener("DOMContentLoaded", function () {
+        // Inicializa EmailJS con tu public key (User ID)
+        emailjs.init("wPGW0aTE-YC3YLbqC");
 
-      const form = document.getElementById("contactoFormulario");
-      const mensaje = document.getElementById("mensaje");
+        const form = document.getElementById("contactoFormulario");
+        const mensaje = document.getElementById("mensaje");
 
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
 
-        emailjs.sendForm("automail", "mailplantilla", this)
-          .then(() => {
-            mensaje.style.color = "green";
-            mensaje.textContent = "✅ Correo enviado correctamente!";
-            form.reset();
-          })
-          .catch((error) => {
-            mensaje.style.color = "red";
-            mensaje.textContent = "❌ Error al enviar el correo. Inténtalo más tarde.";
-            console.error("Error EmailJS:", error);
-          });
+          emailjs
+            .sendForm("automail", "mailplantilla", this)
+            .then(() => {
+              mensaje.style.color = "green";
+              mensaje.textContent = "✅ Correo enviado correctamente!";
+              form.reset();
+            })
+            .catch((error) => {
+              mensaje.style.color = "red";
+              mensaje.textContent =
+                "❌ Error al enviar el correo. Inténtalo más tarde.";
+              console.error("Error EmailJS:", error);
+            });
+        });
       });
-    </script> 
-</body>
-
+    </script>
+  </body>
 </html>
+
 
 
