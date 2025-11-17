@@ -200,12 +200,35 @@
       &copy; 2025 InsuWave. Todos los derechos reservados.
     </footer>
 
+    <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
     <script>
+      (function () {
+        emailjs.init("TU_USER_ID"); // Pon aquí tu User ID de EmailJS
+      })();
+
       const form = document.getElementById("contactoFormulario");
-      form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Evita recargar la página
-        document.getElementById("mensaje").textContent = "✅ Se ha enviado un correo con la información anticipada.";
+      const mensaje = document.getElementById("mensaje");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        emailjs
+          .sendForm("automail", "mailplantilla", this)
+          .then(
+            function () {
+              mensaje.style.color = "green";
+              mensaje.textContent = "✅ Correo enviado correctamente!";
+              form.reset();
+            },
+            function (error) {
+              mensaje.style.color = "red";
+              mensaje.textContent =
+                "❌ Error al enviar el correo. Inténtalo más tarde.";
+              console.error("Error EmailJS:", error);
+            }
+          );
       });
     </script>  
 </body>
+
 </html>
