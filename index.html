@@ -213,20 +213,25 @@
     form.addEventListener("submit", function(event) {
       event.preventDefault();
 
-      emailjs.sendForm("automail", "mailplantilla", this)
-        .then(function() {
-          mensaje.style.color = "green";
-          mensaje.textContent = "✅ Correo enviado correctamente!";
-          form.reset();
-        }, function(error) {
-          mensaje.style.color = "red";
-          mensaje.textContent = "❌ Error al enviar el correo. Inténtalo más tarde.";
-          console.error("Error EmailJS:", error);
-        });
-    });
-  </script>
+      emailjs
+       .sendForm("automail", "mailplantilla", this)
+       .then(
+         function () {
+           mensaje.style.color = "green";
+           mensaje.textContent = "✅ Correo enviado correctamente!";
+           form.reset();
+         },
+         function (error) {
+           mensaje.style.color = "red";
+           mensaje.textContent =
+             "❌ Error al enviar el correo: " + error.text;
+           console.error("Error EmailJS:", error);
+          }
+        );
+       </script>
   </body>
 </html>
+
 
 
 
