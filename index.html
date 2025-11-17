@@ -203,32 +203,31 @@
       &copy; 2025 InsuWave. Todos los derechos reservados.
     </footer>
 
-    <script type="module">
-      import { init, sendForm } from "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js";
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      emailjs.init("wPGW0aTE-YC3YLbqC");
 
-      init("wPGW0aTE-YC3YLbqC"); // Pon aquí tu User ID o Public Key
+    const form = document.getElementById("contactoFormulario");
+    const mensaje = document.getElementById("mensaje");
 
-      const form = document.getElementById("contactoFormulario");
-      const mensaje = document.getElementById("mensaje");
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
 
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        sendForm("automail", "mailplantilla", form)
-          .then(() => {
-            mensaje.style.color = "green";
-            mensaje.textContent = "✅ Correo enviado correctamente!";
-            form.reset();
-          })
-          .catch((error) => {
-            mensaje.style.color = "red";
-            mensaje.textContent = "❌ Error al enviar el correo. Inténtalo más tarde.";
-            console.error("Error EmailJS:", error);
-          });
-      });
-    </script>
+      emailjs.sendForm("automail", "mailplantilla", this)
+        .then(function() {
+          mensaje.style.color = "green";
+          mensaje.textContent = "✅ Correo enviado correctamente!";
+          form.reset();
+        }, function(error) {
+          mensaje.style.color = "red";
+          mensaje.textContent = "❌ Error al enviar el correo. Inténtalo más tarde.";
+          console.error("Error EmailJS:", error);
+        });
+    });
+  </script>
   </body>
 </html>
+
 
 
 
