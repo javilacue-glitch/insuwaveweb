@@ -204,31 +204,32 @@
     </footer>
 
    <script type="module">
-     import * as emailjs from "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
+      import * as emailjs from "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
 
-     emailjs.init("wPGW0aTE-YC3YLbqC");
+      emailjs.init("wPGW0aTE-YC3YLbqC");
 
-     const form = document.getElementById("contactoFormulario");
-     const mensaje = document.getElementById("mensaje");
+      const form = document.getElementById("contactoFormulario");
+      const mensaje = document.getElementById("mensaje");
 
-     form.addEventListener("submit", (event) => {
-       event.preventDefault();
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-       emailjs.sendForm("automail", "mailplantilla", form)
-         .then(() => {
-           mensaje.style.color = "green";
-           mensaje.textContent = "✅ Correo enviado correctamente!";
-           form.reset();
-         })
-         .catch((error) => {
-           mensaje.style.color = "red";
-           mensaje.textContent = "❌ Error: " + JSON.stringify(error);
-           console.error("Error EmailJS:", error);
-         });
-     });
-   </script>
+        emailjs.sendForm("automail", "mailplantilla", form)
+          .then(() => {
+            mensaje.style.color = "green";
+            mensaje.textContent = "✅ Correo enviado correctamente!";
+            form.reset();
+          })
+          .catch((error) => {
+            mensaje.style.color = "red";
+            mensaje.textContent = "❌ Error al enviar el correo. Inténtalo más tarde.";
+            console.error("Error EmailJS:", error);
+          });
+      });
+    </script>
   </body>
 </html>
+
 
 
 
