@@ -203,38 +203,32 @@
       &copy; 2025 InsuWave. Todos los derechos reservados.
     </footer>
 
-    <!-- Carga correcta del SDK EmailJS -->
-    <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+    <script type="module">
+      import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Inicializa EmailJS con tu public key (User ID)
-        emailjs.init("wPGW0aTE-YC3YLbqC");
+      emailjs.init("wPGW0aTE-YC3YLbqC");
 
-        const form = document.getElementById("contactoFormulario");
-        const mensaje = document.getElementById("mensaje");
+      const form = document.getElementById("contactoFormulario");
+      const mensaje = document.getElementById("mensaje");
 
-        form.addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          emailjs
-            .sendForm("automail", "mailplantilla", this)
-            .then(() => {
-              mensaje.style.color = "green";
-              mensaje.textContent = "✅ Correo enviado correctamente!";
-              form.reset();
-            })
-            .catch((error) => {
-              mensaje.style.color = "red";
-              mensaje.textContent =
-                "❌ Error al enviar el correo. Inténtalo más tarde.";
-              console.error("Error EmailJS:", error);
-            });
-        });
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+        emailjs.sendForm("automail", "mailplantilla", this)
+          .then(() => {
+            mensaje.style.color = "green";
+            mensaje.textContent = "✅ Correo enviado correctamente!";
+            form.reset();
+          }, (error) => {
+            mensaje.style.color = "red";
+            mensaje.textContent = "❌ Error al enviar el correo. Inténtalo más tarde.";
+            console.error("Error EmailJS:", error);
+          });
       });
     </script>
   </body>
 </html>
+
 
 
 
