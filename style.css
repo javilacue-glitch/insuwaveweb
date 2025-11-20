@@ -106,3 +106,9 @@ footer {
   margin-top: 15px;
   font-size: 22px;
 }
+
+.lista-caracteristicas {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
