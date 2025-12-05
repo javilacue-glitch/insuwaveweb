@@ -69,18 +69,15 @@
 
       <section>
         <h2>Contacto</h2>
-        <form id="contactoFormulario" action="javascript:void(0);">
-          <label for="nombre">Nombre y Apellidos:</label>
-          <input type="text" id="nombre" name="nombre" required />
-
-          <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" required />
-
-          <input type="submit" value="Enviar" />
+          <form class="form" id="contactoFormulario" action="javascript:void(0);">
+            <span class="title">Suscríbete a nuestra newsletter.</span>
+            <p class="description">Rellenando el formulario, recibirás las próximas novedades del Wave 1.</p>
+            <div><label for="nombre">Nombre y Apellidos:</label><input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre y apellidos" required /></div>
+            <div><input type="email" id="email-address" name="email" placeholder="Introduce tu correo electrónico" required /></div>
+          <button type="submit">Suscríbete</button>
         </form>
-
-        <p id="mensaje"></p>
-      </section>
+      <p id="mensaje"></p>
+    </section>
     </main>
 
     <footer>&copy; 2025 InsuWave. Todos los derechos reservados.</footer>
@@ -114,3 +111,4 @@
     </script>
   </body>
 </html>
+
