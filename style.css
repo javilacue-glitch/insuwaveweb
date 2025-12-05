@@ -54,7 +54,7 @@ section {
 .form {
   margin: 0 auto;
   background: black;
-  max-width: 350px;
+  max-width: 450px;
   padding: 20px;
   border-radius: 10px;
   display: flex;
@@ -63,15 +63,18 @@ section {
 
 .form div {
   display: flex;
-  max-width: 28rem;
+  max-width: 100%;
   margin-top: 1rem;
   column-gap: 0.5rem;
 }
 
 .form div input {
+  flex: 1;
   background-color: #222;
   color: white;
   border: 1px solid #444;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
 .form div input::placeholder {
@@ -86,6 +89,11 @@ section {
   background-color: #444;
   color: white;
   cursor: pointer;
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  margin-top: 1rem;
 }
 
 .form div button:hover {
