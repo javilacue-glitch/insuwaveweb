@@ -51,78 +51,70 @@ section {
   margin-top: 2rem;
 }  
 
+/* From Uiverse.io by Yaya12085 */ 
 .form {
-  margin: 0 auto;
-  background: black;
-  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  background: #606c88;
+  background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);
+  background: linear-gradient(to right, #3f4c6b, #606c88);
   padding: 20px;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column; 
-  gap: 1rem;
+  max-width: 350px;
 }
 
-.form-header {
-   text-align: left;
-  font-size: 0.85rem;
-  color: #ccc;
-  margin-bottom: 1rem;
+.title {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #fff;
 }
 
-.form-footer {
-  text-align: right;
-  font-size: 0.85rem;
-  color: #ccc;
+.description {
+  line-height: 1.5rem;
+  font-size: 1rem;
   margin-top: 1rem;
+  color: rgb(209 213 219);
 }
 
 .form div {
   display: flex;
-  max-width: 100%;
-  align-items: center;
+  max-width: 28rem;
+  margin-top: 1rem;
   column-gap: 0.5rem;
 }
 
-.form div label {
-  font-weight: bold;
-  min-width: 140px;
-  color: white;
-  text-align: left;
-}  
-
 .form div input {
-  flex: 1;
-  background-color: #222;
-  color: white;
-  border: 1px solid #444;
-  padding: 0.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
+  outline: none;
+  line-height: 1.5rem;
+  font-size: 0.875rem;
+  color: rgb(255 255 255 );
+  padding: 0.5rem 0.875rem;
+  background-color: rgb(255 255 255 / 0.05);
+  border: 1px solid rgba(253, 253, 253, 0.363);
+  border-radius: 0.375rem;
+  flex: 1 1 auto;
 }
 
 .form div input::placeholder {
-  color: #aaa;
+  color: rgb(216, 212, 212);
 }
 
 .form div input:focus {
-  borde-color: #6366f1;
+  border: 1px solid rgb(99 102 241);
 }
 
 .form div button {
-  background-color: #444;
-  color: white;
-  cursor: pointer;
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.625rem 0.875rem;
+  background-color: rgb(99 102 241);
+  border-radius: 0.375rem;
   border: none;
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-.form div button:hover {
-  background-color: #666;
+  outline: none;
 }
 
 label {
