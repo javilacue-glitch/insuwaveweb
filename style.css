@@ -39,17 +39,23 @@ section {
   text-align: center;
 }
 
+.form-section {
+  text-align: center;
+  color: white;
+  margin-top: 0;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 h2 {
   margin-bottom: 20px;
   color: white;
   font-size: 30px;
 }
-
-section {
-  text-align: center;
-  color: white;
-  margin-top: 2rem;
-}  
 
 .form {
   background: #000;
@@ -81,8 +87,8 @@ section {
 
 .form div label {
   font-weight: bold;
-  min-width: 170px;
-  font-size: 1.1rem;
+  min-width: 130px;
+  font-size: 1rem;
   text-align: left;
 }
 
@@ -105,10 +111,10 @@ button[type="submit"] {
   color: white;
   cursor: pointer;
   width: 100%;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 10px;
   border: none;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin-top: 1rem;
   transition: background-color 0.25s ease;
@@ -121,10 +127,9 @@ button[type="submit"]:hover {
 main {
   text-align: center;
   padding: 40px;
-  
   background-image: url("img/fondo1.jpg");
-  background-size: cover;        
-  background-position: center;   
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -152,7 +157,7 @@ footer {
 }
 
 .lista-caracteristicas {
-    list-style: none;
-    padding-left: 0;
-    margin-left: 0;
-}  
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
