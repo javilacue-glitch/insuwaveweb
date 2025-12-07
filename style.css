@@ -162,6 +162,7 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative
 }
 
 .nav-toggle {
@@ -173,7 +174,7 @@ footer {
   width: 30px;
   height: 25px;
   position: relative;
-  z-index: 100;
+  z-index: 101;
   margin-right: 20px; 
 }
 
@@ -198,19 +199,18 @@ footer {
 
 .nav-menu {
   list-style: none;
-  position: fixed; 
-  top: 0;
+  position: absolute; 
+  top: 100%;
   left: 0;
   width: 250px;
-  height: 100%; 
+  max-height: 0; 
   background-color: #444; 
   flex-direction: column;
-  padding: 60px 0 0 0; 
+  padding: 0; 
   margin: 0;
   
-  transform: translateX(-100%); 
-  transition: transform 0.3s ease-in-out;
-  z-index: 100;
+  transition: max-height 0.3s ease-in-out; 
+  z-index: 100; 
   
   display: flex; 
 }
@@ -234,5 +234,5 @@ footer {
 }
 
 .nav-menu.active {
-  transform: translateX(0); 
+  max-height: 300px;
 }
