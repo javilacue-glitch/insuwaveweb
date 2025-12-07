@@ -51,12 +51,6 @@ section {
   min-height: 100vh;
 }
 
-h2 {
-  margin-bottom: 10px;
-  color: white;
-  font-size: 30px;
-}
-
 .form {
   background: #000;
   max-width: 500px;
