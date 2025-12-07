@@ -156,14 +156,14 @@ footer {
   margin-left: 0;
 }
 
-.dropdown-nav {
+.hamburguesa {
   background-color: #2e2e2e; 
   text-align: center;
   padding: 0;
   margin-top: 10px; 
 }
 
-.dropdown-nav ul {
+.hamburguesa ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -171,12 +171,12 @@ footer {
   justify-content: center;
 }
 
-.dropdown-nav li {
+.hamburguesa li {
   position: relative; 
   text-align: center;
 }
 
-.dropdown-nav a {
+.hamburguesa a {
   display: block;
   padding: 15px 20px;
   text-decoration: none;
@@ -185,7 +185,7 @@ footer {
   transition: background-color 0.3s;
 }
 
-.dropdown-nav a:hover {
+.hamburguesa a:hover {
   background-color: #6366f1; 
 }
 
