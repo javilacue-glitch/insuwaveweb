@@ -14,16 +14,25 @@
       <img src="img/logo.png" alt="Logo de InsuWave" class="logo" width="200" />
 
       <nav class="hamburguesa">
-        <ul>
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        
+        <ul class="nav-menu" id="nav-menu">
          <li class="dropdown">
             <a href="#">Menú Desplegable</a>
             <ul class="dropdown-content">
-              <li><a href="#">Elemento Random 1</a></li>
-              <li><a href="#">Elemento Random 2</a></li>
-              <li><a href="#">Elemento Random 3</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Opción Principal A</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Opción Principal B</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Elemento Random 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Elemento Random 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Elemento Random 3</a></li>
             </ul>
           </li>
         </ul>
+      </nav>
     </header>
 
     <main>
@@ -123,6 +132,7 @@
     </script>
   </body>
 </html>
+
 
 
 
