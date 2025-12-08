@@ -164,11 +164,11 @@ footer {
   padding: 15px 20px;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  
+  align-items: flex-start;
   position: relative; 
-  
   z-index: 30; 
+  overflow: visible;
+  padding-bottom: 0;
 }
 
 .nav-toggle {
@@ -180,9 +180,9 @@ footer {
   width: 30px;
   height: 25px;
   position: relative;
-  
   z-index: 1000; 
   margin-right: 20px; 
+  margin-top: 2px;
 }
 
 .bar {
@@ -222,16 +222,17 @@ footer {
   
   max-height: 0; 
   overflow: hidden; 
-  opacity: 1;
-  
+    
   transition: max-height 0.4s ease-in-out; 
   z-index: 999; 
   
   display: flex; 
+  flex-wrap: wrap;
 }
 
 .nav-item {
   margin: 0;
+  width: 100%;
 }
 
 .nav-link {
