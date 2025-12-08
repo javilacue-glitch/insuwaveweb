@@ -95,62 +95,20 @@
 
     <footer>&copy; 2025 InsuWave. Todos los derechos reservados.</footer>
 
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+   <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script type="text/javascript">
-      (function() {
+      // Inicialización de EmailJS
+      (function () {
         emailjs.init({
           publicKey: "wPGW0aTE-YC3YLbqC",
         });
       })();
-
-      const form = document.getElementById("contactoFormulario");
-      const mensaje = document.getElementById("mensaje");
-
-      form.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        emailjs.sendForm("automail", "mailplantilla", this)
-          .then(() => {
-            mensaje.style.color = "green";
-            mensaje.textContent = "✅ Correo enviado correctamente!";
-            form.reset();
-          })
-          .catch((error) => {
-            mensaje.style.color = "red";
-            mensaje.textContent = "❌ Error al enviar el correo. Inténtalo más tarde.";
-            console.error("Error EmailJS:", error);
-          });
-      });
     </script>
-
-    <script>
-      (function() {
-          const toggleButton = document.querySelector('.nav-toggle');
-          const navMenu = document.querySelector('.nav-menu');
-
-          if (toggleButton && navMenu) {
-              toggleButton.addEventListener('click', function() {
-                  navMenu.classList.toggle('active');
-                  toggleButton.classList.toggle('active');
-              });
-          }
-      })();
-    </script>
+    
+    <script src="script.js"></script>
     
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
