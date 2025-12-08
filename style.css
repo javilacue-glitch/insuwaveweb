@@ -165,8 +165,10 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  position: relative;
-  z-index: 30;
+  
+  position: relative; 
+  
+  z-index: 30; 
 }
 
 .nav-toggle {
@@ -178,7 +180,8 @@ footer {
   width: 30px;
   height: 25px;
   position: relative;
-  z-index: 1000;
+  
+  z-index: 1000; 
   margin-right: 20px; 
 }
 
@@ -190,6 +193,7 @@ footer {
   margin: 5px 0;
   transition: all 0.3s;
 }
+
 
 .nav-toggle.active .bar:nth-child(2) {
     opacity: 0;
@@ -203,23 +207,27 @@ footer {
 
 .nav-menu {
   list-style: none;
-  position: asolute; 
-  top: 100%;
+  
+  position: absolute; 
+  
+  top: 100%; 
   left: 0;
   
-  width: 250px;
+  width: 250px; 
   
   background-color: #444; 
   flex-direction: column;
-  padding: 0; 
+  padding: 0;
   margin: 0;
   
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0.95;
-  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out; 
-  z-index: 999;
-  display: flex;
+  max-height: 0; 
+  overflow: hidden; 
+  opacity: 1;
+  
+  transition: max-height 0.4s ease-in-out; 
+  z-index: 999; 
+  
+  display: flex; 
 }
 
 .nav-item {
@@ -242,5 +250,4 @@ footer {
 
 .nav-menu.active {
   max-height: 400px; 
-  opacity: 1;
 }
