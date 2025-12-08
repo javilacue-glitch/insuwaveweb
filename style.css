@@ -198,8 +198,8 @@ footer {
 
 .nav-menu {
   list-style: none;
-  position: fixed; 
-  top: 130px;
+  position: asolute; 
+  top: 170px;
   left: 0;
   width: 250px;
   max-height: 500px; 
@@ -211,8 +211,6 @@ footer {
   transform: translateX(-100%); 
   transition: transform 0.3s ease-in-out; 
   z-index: 999; 
-  
-  display: flex;
 }
 
 .nav-item {
@@ -234,5 +232,6 @@ footer {
 }
 
 .nav-menu.active {
-  transform: translateX(0);
+  display: flex; 
+  opacity: 1;
 }
