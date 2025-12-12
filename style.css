@@ -7,7 +7,7 @@ body {
   color: white;
   font-size: 22px;
   line-height: 1.6;
-  padding-bottom: 50px; 
+  padding-bottom: 50px;
 }
 
 header {
@@ -46,12 +46,12 @@ section {
   text-align: center;
   color: white;
   margin-top: 0;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 0; 
+  padding: 40px 0;
 }
 
 .form {
@@ -147,7 +147,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 50px; 
+  height: 50px;
 }
 
 #mensaje {
@@ -164,17 +164,17 @@ footer {
 
 .hamburguesa {
   background-color: #2e2e2e;
-  padding: 15px 20px; 
+  padding: 15px 20px;
   display: flex;
   justify-content: flex-start;
-  align-items: center; 
-  position: relative; 
-  z-index: 30; 
+  align-items: center;
+  position: relative;
+  z-index: 30;
   overflow: visible;
 }
 
 .nav-toggle {
-  display: block; 
+  display: block;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -182,8 +182,8 @@ footer {
   width: 30px;
   height: 25px;
   position: relative;
-  z-index: 1000; 
-  margin-right: 20px; 
+  z-index: 1000;
+  margin-right: 20px;
 }
 
 .bar {
@@ -197,42 +197,44 @@ footer {
 
 
 .nav-toggle.active .bar:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
+
 .nav-toggle.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
+
 .nav-toggle.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 .nav-menu {
   list-style: none;
-  
-  position: absolute; 
-  
-  top: 100%; 
+
+  position: absolute;
+
+  top: 100%;
   left: 0;
-  
-  width: 250px; 
-  
-  background-color: #444; 
+
+  width: 250px;
+
+  background-color: #444;
   flex-direction: column;
   padding: 0;
   margin: 0;
-  
-  max-height: 400px; 
-  overflow: hidden; 
 
-  transform-origin: top; 
+  max-height: 400px;
+  overflow: hidden;
+
+  transform-origin: top;
   transform: scaleY(0);
 
   will-change: transform;
-    
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
-  
-  z-index: 999; 
-  display: flex; 
+
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  z-index: 999;
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -247,7 +249,7 @@ footer {
   text-decoration: none;
   color: white;
   font-size: 20px;
-  border-bottom: 1px solid #555; 
+  border-bottom: 1px solid #555;
 }
 
 .nav-link:hover {
@@ -256,5 +258,6 @@ footer {
 }
 
 .nav-menu.active {
-  transform: scaleY(1); 
+  transform: scaleY(1);
 }
+
