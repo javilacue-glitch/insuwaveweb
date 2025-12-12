@@ -4,7 +4,7 @@
 
     if (toggleButton && navMenu) {
         toggleButton.addEventListener('click', function() {
-            // Alterna la clase 'active' para el CSS (menú desplegable y animación X)
+            
             navMenu.classList.toggle('active');
             toggleButton.classList.toggle('active');
         });
@@ -14,7 +14,7 @@
 const form = document.getElementById("contactoFormulario");
 const mensaje = document.getElementById("mensaje");
 
-if (form) { // Asegura que el formulario exista
+if (form) {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
