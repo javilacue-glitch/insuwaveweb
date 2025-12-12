@@ -37,6 +37,10 @@ header p {
   width: 80px;
 }
 
+.imgEquipo{
+  width: 40vw;
+}
+
 section {
   padding: 15px;
   text-align: center;
