@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pagina oficial InsuWave</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  
+  <body>
+    <header>
+      <h1>InsuWave</h1>
+      <p>Innovación, Empatía y Seguridad</p>
+      <img src="img/logo.png" alt="Logo de InsuWave" class="logo" width="200" />
+
+     <nav class="hamburguesa">
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Pagina Principal</a></li>
+          <li class="nav-item"><a href="nuestra-historia.html" class="nav-link">Nuestra Historia</a></li>
+          </ul>
+      </nav>
+    </header>
+
+  <main>
+      <section>
+        <h2>Inicio de Sesión para Usuarios</h2>
+      </section>
+
+        <section>
+            <form action="procesar_login.php" method="POST" class="login-form">
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required />
+    
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required />
+    
+            <button type="submit">Iniciar Sesión</button>
+            </form>
+  </main>
+
+    <footer>&copy; 2025 InsuWave. Todos los derechos reservados.</footer>   
