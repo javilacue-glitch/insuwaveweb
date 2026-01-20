@@ -351,3 +351,12 @@ footer {
   background-color: #6366f1;
   color: white;
 }
+
+.eye-icon {
+  transition: opacity 0.3s ease;
+  user-select: none; /* Evita que se seleccione el icono como texto */
+}
+
+.eye-icon:hover {
+  transform: scale(1.1);
+}

@@ -56,6 +56,20 @@
         </main>
 
   <footer>&copy; 2025 InsuWave. Todos los derechos reservados.</footer>   
+
+  <script>
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+        // Cambiamos el tipo de atributo
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        
+        // Opcional: Cambiar la opacidad del ojo para indicar si está activo o no
+        this.style.opacity = type === 'password' ? '1' : '0.5';
+    });
+  </script>
     
   <script src="script.js"></script>
   </body>
