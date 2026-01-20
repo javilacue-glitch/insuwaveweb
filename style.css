@@ -302,10 +302,10 @@ footer {
 .field {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 0.5em;
   border-radius: 25px;
-  padding: 0.6em;
+  padding: 0.6em 1em;
   border: none;
   outline: none;
   color: white;
@@ -354,7 +354,8 @@ footer {
 
 .eye-icon {
   transition: opacity 0.3s ease;
-  user-select: none; /* Evita que se seleccione el icono como texto */
+  user-select: none;
+  flex-shrink: 0;
 }
 
 .eye-icon:hover {
