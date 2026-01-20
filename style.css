@@ -314,9 +314,10 @@ footer {
 }
 
 .input-icon {
-  height: 1.3em;
-  width: 1.3em;
+  height: 1.2em;
+  width: 1.2em;
   fill: white;
+  flex-shrink: 0;
 }
 
 .input-field {
@@ -325,6 +326,8 @@ footer {
   outline: none;
   width: 100%;
   color: #d3d3d3;
+  font-size: 18px;
+  flex-grow: 1;
 }
 
 .form-login .btn {
@@ -353,11 +356,30 @@ footer {
 }
 
 .eye-icon {
-  transition: opacity 0.3s ease;
-  user-select: none;
+  width: 20px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 70% 15%;
+  position: relative;
+  transform: rotate(45deg);
+  cursor: pointer;
   flex-shrink: 0;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+.eye-icon::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .eye-icon:hover {
-  transform: scale(1.1);
+  opacity: 0.7;
 }

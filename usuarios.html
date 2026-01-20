@@ -36,21 +36,27 @@
       <section class="form-section">
             <form class="form-login" action="index.html" method="GET">
               <p id="heading">Iniciar Sesión</p>
+
                 <div class="field">
               <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
               </svg>
               <input autocomplete="off" placeholder="Correo Electrónico" class="input-field" type="email" name="username" required>
             </div>
+
             <div class="field">
-            <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
-            </svg>
+              <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
+              </svg>
               <input placeholder="Contraseña" class="input-field" type="password" name="password" required>
+              
+              <span id="togglePassword" class="eye-icon"></span>            
             </div>
+
             <div class="btn">
             <button class="button1" type="submit">Iniciar Sesión</button>
             </div>
+
           </form>
         </section>
         </main>
@@ -59,16 +65,13 @@
 
   <script>
     const togglePassword = document.querySelector('#togglePassword');
-    const password = document.querySelector('#password');
+        const passwordInput = document.querySelector('#password');
 
-    togglePassword.addEventListener('click', function (e) {
-        // Cambiamos el tipo de atributo
-        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-        password.setAttribute('type', type);
-        
-        // Opcional: Cambiar la opacidad del ojo para indicar si está activo o no
-        this.style.opacity = type === 'password' ? '1' : '0.5';
-    });
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.style.opacity = (type === 'password') ? '1' : '0.4';
+        });
   </script>
     
   <script src="script.js"></script>
