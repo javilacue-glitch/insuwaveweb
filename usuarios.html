@@ -64,14 +64,17 @@
   <footer>&copy; 2025 InsuWave. Todos los derechos reservados.</footer>   
 
   <script>
-    const togglePassword = document.querySelector('#togglePassword');
-        const passwordInput = document.querySelector('#password');
+    const btnOjo = document.getElementById('togglePassword');
+    const inputPass = document.getElementById('password');
 
-        togglePassword.addEventListener('click', function () {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            this.style.opacity = (type === 'password') ? '1' : '0.4';
+    if (btnOjo && inputPass) {
+        btnOjo.addEventListener('click', function () {
+            const esPassword = inputPass.getAttribute('type') === 'password';
+            inputPass.setAttribute('type', esPassword ? 'text' : 'password');
+            
+            this.style.opacity = esPassword ? '0.4' : '1';
         });
+    }
   </script>
     
   <script src="script.js"></script>
