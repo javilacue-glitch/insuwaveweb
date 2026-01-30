@@ -32,6 +32,28 @@ if (form) {
     });
 }
 
+const btnModo = document.querySelector('#btn-modo');
+    const body = document.body;
+
+    const modoGuardado = localStorage.getItem('tema');
+    if (modoGuardado === 'claro') {
+        body.classList.add('light-mode');
+        if (btnModo) btnModo.checked = true;
+    }
+
+    if (btnModo) {
+        btnModo.addEventListener('change', function() {
+            if (this.checked) {
+                body.classList.add('light-mode');
+                localStorage.setItem('tema', 'claro');
+            } else {
+                body.classList.remove('light-mode');
+                localStorage.setItem('tema', 'oscuro');
+            }
+        });
+    }
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const usuarioActivo = sessionStorage.getItem("usuarioInsuWave");
     const display = document.getElementById("user-display");
