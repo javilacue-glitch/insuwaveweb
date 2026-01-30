@@ -406,8 +406,8 @@ footer {
   position: absolute;
   cursor: pointer;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #fff;
-  border: 1px solid #adb5bd;
+  background-color: #111111;
+  border: 1px solid #444;
   transition: .4s;
   border-radius: 30px;
 }
@@ -423,13 +423,13 @@ footer {
 }
 
 input:checked + .slider {
-  background-color: #111111; 
-  border: 1px solid #111111;
+  background-color: #ffffff; 
+  border: 1px solid #adb5bd;
 }
 
 input:checked + .slider:before {
   transform: translateX(1.4em);
-  background-color: #fff;
+  background-color: #111111;
 }
 
 body.light-mode {
