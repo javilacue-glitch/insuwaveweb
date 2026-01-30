@@ -383,3 +383,87 @@ footer {
 .eye-icon:hover {
   opacity: 0.7;
 }
+
+.switch-container {
+  position: absolute;
+  top: 25px;
+  right: 120px;
+  z-index: 100;
+}
+
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #fff;
+  border: 1px solid #adb5bd;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em; width: 1.4em;
+  border-radius: 20px;
+  left: 0.27em; bottom: 0.25em;
+  background-color: #adb5bd;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #111111; 
+  border: 1px solid #111111;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.4em);
+  background-color: #fff;
+}
+
+body.light-mode {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.light-mode main {
+  background-image: url("img/fondoblanco.jpg") !important;
+}
+
+body.light-mode header, body.light-mode footer {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+body.light-mode .form-login {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  color: #000;
+}
+
+body.light-mode .field {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+body.light-mode .input-field, body.light-mode #heading {
+  color: #000;
+}
+
+body.light-mode .input-icon {
+  fill: #333;
+}
+
+body.light-mode .eye-icon { border-color: #000; }
+body.light-mode .eye-icon::before { background-color: #000; }

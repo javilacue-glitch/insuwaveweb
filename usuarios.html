@@ -11,6 +11,14 @@
     <header>
       <h1>InsuWave</h1>
       <p>Innovación, Empatía y Seguridad</p>
+
+      <div class="switch-container">
+        <label class="switch">
+            <input type="checkbox" id="btn-modo">
+            <span class="slider"></span>
+        </label>
+    </div>
+
       <div id="user-display"></div>
       <img src="img/logo.png" alt="Logo de InsuWave" class="logo" width="200" />
 
@@ -78,15 +86,16 @@
 
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
-        loginForm.addEventListener('submit', function() {
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); 
             const email = document.getElementById('emailLogin').value;
             const usuario = email.split('@')[0];
             sessionStorage.setItem('usuarioInsuWave', usuario);
             window.location.href = 'index.html';
         });
     }
-  </script>
-    
-  <script src="script.js"></script>
+</script>
+
+<script src="script.js"></script>
   </body>
 </html>
