@@ -8,44 +8,6 @@
             toggleButton.classList.toggle('active');
         });
     }
-
-    const btnModo = document.querySelector('#btn-modo');
-    const body = document.body;
-
-    const modoGuardado = localStorage.getItem('tema');
-    if (modoGuardado === 'claro') {
-        body.classList.add('light-mode');
-        if (btnModo) btnModo.checked = true;
-    }
-
-    if (btnModo) {
-        btnModo.addEventListener('change', function() {
-            if (this.checked) {
-                body.classList.add('light-mode');
-                localStorage.setItem('tema', 'claro');
-            } else {
-                body.classList.remove('light-mode');
-                localStorage.setItem('tema', 'oscuro');
-            }
-        });
-    }
-
-    const usuarioActivo = sessionStorage.getItem("usuarioInsuWave");
-    const display = document.getElementById("user-display");
-
-    if (usuarioActivo && display) {
-        display.innerHTML = `
-            <div style="text-align:center; margin-top:10px; font-size:18px;">
-                <span style="color: #6366f1; font-weight: bold; text-transform: capitalize;">Hola, ${usuarioActivo}</span>
-                <button id="logout" style="background:none; border:none; color:red; cursor:pointer; text-decoration:underline; margin-left:10px;">Salir</button>
-            </div>
-        `;
-
-        document.getElementById("logout").addEventListener("click", function() {
-            sessionStorage.removeItem("usuarioInsuWave");
-            window.location.reload();
-        });
-    }
 })();
 
 const form = document.getElementById("contactoFormulario");
@@ -54,11 +16,42 @@ const mensaje = document.getElementById("mensaje");
 if (form) {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-        emailjs.sendForm("automail", "mailplantilla", this)
+
+        emailjs
+        .sendForm("automail", "mailplantilla", this)
         .then(() => {
             mensaje.style.color = "green";
             mensaje.textContent = "✅ Correo enviado correctamente!";
             form.reset();
+        })
+        .catch((error) => {
+            mensaje.style.color = "red";
+            mensaje.textContent = "❌ Error al enviar el correo. Inténtalo más tarde.";
+            console.error("Error EmailJS:", error);
         });
     });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const usuarioActivo = sessionStorage.getItem("usuarioInsuWave");
+    const display = document.getElementById("user-display");
+
+    if (usuarioActivo && display) {
+        display.innerHTML = `
+            <div style="margin: 10px 0; font-size: 18px; text-align: center;">
+                <span style="color: #6366f1; font-weight: bold; text-transform: capitalize;">
+                    Hola, ${usuarioActivo}
+                </span>
+                <span style="color: #666; margin: 0 10px;">|</span>
+                <button id="logout" style="background: none; border: none; color: #ff4d4d; cursor: pointer; text-decoration: underline; font-size: 16px; padding: 0;">
+                    Cerrar Sesión
+                </button>
+            </div>
+        `;
+
+        document.getElementById("logout").addEventListener("click", function() {
+            sessionStorage.removeItem("usuarioInsuWave");
+            window.location.reload(); 
+        });
+    }
+});
