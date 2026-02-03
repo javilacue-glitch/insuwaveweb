@@ -228,6 +228,18 @@ main {
   border-radius: 20px;
 }
 
+.innovacion-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.innovacion-list li {
+  margin-bottom: 15px;
+  font-size: 24px;
+  text-align: left;
+}
+
 body.light-mode { background-color: #ffffff; }
 body.light-mode main { background-image: url("img/fondoblanco.jpg") !important; }
 body.light-mode header, body.light-mode footer { background-color: #e0e0e0; color: #000; }
