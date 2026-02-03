@@ -1,123 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pagina oficial InsuWave</title>
+    <title>InsuWave - Innovación del Futuro</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  
-  <body>
+</head>
+<body>
     <header>
-      <h1>InsuWave</h1>
-  <p>Innovación, Empatía y Seguridad</p>
-
-  <div class="switch-container">
-    <label class="switch">
-        <input type="checkbox" id="btn-modo">
-        <span class="slider"></span>
-    </label>
-</div>
-
-  <div id="user-display" class="user-info"></div>
-  <img src="img/logo.png" alt="Logo de InsuWave" class="logo" width="200" />
-
-      <nav class="hamburguesa">
-        <button class="nav-toggle" aria-label="Abrir menú">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-
-        <ul class="nav-menu" id="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">Pagina Principal</a></li>
-          <li class="nav-item"><a href="nuestra-historia.html" class="nav-link">Nuestra Historia</a></li>
-          <li class="nav-item"><a href="usuarios.html" class="nav-link">Usuarios</a></li>
-        </ul>
-      </nav>
+        <h1>InsuWave</h1>
+        <div class="switch-container">
+            <label class="switch">
+                <input type="checkbox" id="btn-modo">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div id="user-display" class="user-info"></div>
+        <img src="img/logo.png" alt="Logo de InsuWave" class="logo" width="200" />
+        <nav class="hamburguesa">
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Página Principal</a></li>
+                <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="nuestra-historia.html" class="nav-link">Nuestra Historia</a></li>
+                <li><a href="usuarios.html" class="nav-link">Usuarios</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-      <section>
-        <h2>Bienvenido a la página oficial de InsuWave.</h2>
-      </section>
+    <main class="hero-main">
+        <section class="hero-welcome">
+            <h2 class="hero-title">BIENVENIDOS A LA INNOVACIÓN DEL FUTURO</h2>
+            <p class="hero-subtitle">Transformando la vida de las personas diabéticas con Wave 1.</p>
+        </section>
 
-      <section>
-        <h2>Quiénes somos</h2>
-        <p>
-          Somos una empresa que esta iniciando y que transmitimos seguridad y
-          confianza.
-        </p>
-        <img src="img/equipo.png" alt="Nuestro equipo" />
-        <p>
-          <strong>Equipo de trabajo, formado por:</strong><br />
-          Luis Rozalen: Fundador y director de marketing.<br />
-          Javier Lacueva: CEO y diseñador del bolígrafo
-        </p>
-      </section>
+        <section class="product-showcase">
+            <div class="product-container">
+                <img src="img/boligrafo.png" alt="InsuWave Wave 1" class="img-product">
+                <div class="product-info">
+                    <h3>Wave 1: Precisión y Empatía</h3>
+                    <p>El Wave 1 es el resultado de una búsqueda incansable por mejorar la calidad de vida. No es solo un dispositivo médico, es un asistente inteligente diseñado para eliminar las barreras de la diabetes.</p>
+                    <ul class="innovacion-list">
+                        <li>🔵 <strong>Conectividad Total:</strong> Sincronización Bluetooth con tu móvil para un registro automático.</li>
+                        <li>🔵 <strong>Pantalla OLED:</strong> Visualiza tu última dosis y recordatorios al instante.</li>
+                        <li>🔵 <strong>Eco-Friendly:</strong> Cartuchos fabricados con materiales biodegradables.</li>
+                        <li>🔵 <strong>Ergonomía Adaptativa:</strong> Fácil de usar para niños y personas con movilidad reducida.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-      <section id="inicio">
-        <h2>Wave 1: el bolígrafo inteligente de insulina</h2>
-        <p>Innovación para tu salud</p>
-        <p>
-          Ayudamos a los diabéticos a calcular su dosis de insulina de forma
-          automática y segura.
-        </p>
-        <img
-          src="img/boli.png"
-          alt="Imagen del bolígrafo inteligente"
-        />
-      </section>
-
-      <section id="solucion">
-        <h2>Nuestra solución</h2>
-        <article>
-          <p>
-            El bolígrafo inteligente se conecta con FreeStyle Libre 2, calcula la
-            dosis y reduce errores.
-          </p>
-        </article>
-      </section>
-
-      <section id="caracteristicas">
-        <h2>Características</h2>
-        <ul class="lista-caracteristicas">
-          <li><span class="guion">-</span> Conectividad en tiempo real</li>
-          <li><span class="guion">-</span> Diseño para niños y mayores</li>
-          <li><span class="guion">-</span> Cartucho ecológico</li>
-          <li><span class="guion">-</span> Pantalla integrada</li>
-        </ul>
-      </section>
-
-      <section class="form-section">
-          <h2>Contacto</h2>
-            <form class="form" id="contactoFormulario" action="javascript:void(0);">
-              <span class="title">Suscríbete a nuestra newsletter.</span>
-              <p class="description">Rellenando el formulario, recibirás las próximas novedades del Wave 1.</p>
-              <div><label for="nombre">Nombre y Apellidos:</label><input type="text" id="nombre" name="nombre" required /></div>
-              <div><label for="email-address">Introduce tu correo electrónico:</label><input type="email" id="email-address" name="email" required /></div>
-            <button type="submit">Suscríbete</button>
-          </form>
-        <p id="mensaje"></p>
-      </section>
+        <div class="hero-action">
+            <a href="quienes-somos.html" class="button-hero">Descubre quiénes somos</a>
+        </div>
     </main>
 
     <footer>&copy; 2025 InsuWave. Todos los derechos reservados.</footer>
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-    
-    (function () {
-        emailjs.init({
-          publicKey: "wPGW0aTE-YC3YLbqC",
-        });
-      })();
-    </script>
-    
     <script src="script.js"></script>
-    
-  </body>
+</body>
 </html>
