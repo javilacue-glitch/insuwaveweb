@@ -8,40 +8,62 @@
 </head>
 <body>
     <header>
-        <h1>InsuWave</h1>
-        <div class="switch-container">
-            <label class="switch">
-                <input type="checkbox" id="btn-modo">
-                <span class="slider"></span>
-            </label>
-        </div>
-        <img src="img/logo.png" alt="Logo de InsuWave" class="logo" width="200" />
-        <nav class="hamburguesa">
-            <button class="nav-toggle" aria-label="Abrir menú">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        <div class="header-content">
+            <div class="logo-side">
+                <img src="img/logo.png" alt="Logo" class="logo">
+                <div class="switch-container">
+                    <label class="switch">
+                        <input type="checkbox" id="btn-modo">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="center-side">
+                <h1>InsuWave</h1>
+                <p>Innovación, Empatía y Seguridad</p>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Página Principal</a></li>
-                <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
-                <li><a href="nuestra-historia.html" class="nav-link">Nuestra Historia</a></li>
-                <li><a href="usuarios.html" class="nav-link">Usuarios</a></li>
-            </ul>
-        </nav>
+
+            <nav class="menu-side" id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Pagina Principal</a></li>
+                    <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+                    <li><a href="nuestra-historia.html" class="nav-link">Nuestra Historia</a></li>
+                    <li><a href="usuarios.html" class="nav-link">Usuarios</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="about-container">
-        <section class="about-content">
-            <h2>Quiénes Somos</h2>
-            <p>Somos dos alumnos del <strong>Camp de Morvedre</strong> unidos por un proyecto que nació en el aula pero que aspira a cambiar el mundo.</p>
-            <p>Tras ganar el concurso que nos llevó a Silicon Valley, entendimos que InsuWave tenía el potencial de ser una solución real para millones de personas.</p>
-            <div class="equipo-nombres">
-                <div class="miembro"><strong>Luis Rozalén</strong><br>Fundador y Marketing</div>
-                <div class="miembro"><strong>Javier Lacueva</strong><br>CEO y Diseño de Producto</div>
+    <div id="user-display"></div>
+
+    <main class="about-container" style="padding: 40px 20px; display: flex; justify-content: center; align-items: center; min-height: 70vh;">
+        <section class="about-content" style="max-width: 800px; background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+            <h2 class="hero-title" style="font-size: 3rem; margin-bottom: 20px;">Quiénes Somos</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">Somos dos alumnos del <strong>Camp de Morvedre</strong> unidos por un proyecto que nació en el aula pero que aspira a cambiar el mundo.</p>
+            <p style="font-size: 1.2rem; margin-bottom: 40px;">Tras ganar el concurso que nos llevó a Silicon Valley, entendimos que InsuWave tenía el potencial de ser una solución real para millones de personas.</p>
+            
+            <div class="equipo-nombres" style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
+                <div class="miembro" style="background: rgba(99, 102, 241, 0.1); padding: 20px; border-radius: 15px; border: 1px solid #6366f1; min-width: 200px;">
+                    <strong style="color: #6366f1; font-size: 1.3rem;">Luis Rozalén</strong><br>Fundador y Marketing
+                </div>
+                <div class="miembro" style="background: rgba(99, 102, 241, 0.1); padding: 20px; border-radius: 15px; border: 1px solid #6366f1; min-width: 200px;">
+                    <strong style="color: #6366f1; font-size: 1.3rem;">Javier Lacueva</strong><br>CEO y Diseño de Producto
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>&copy; 2025 InsuWave.</footer>
+    <footer>
+        <p>&copy; 2026 InsuWave. Todos los derechos reservados.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

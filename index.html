@@ -1,63 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InsuWave - Innovación del Futuro</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsuWave - Innovación en Insulina</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>InsuWave</h1>
-        <div class="switch-container">
-            <label class="switch">
-                <input type="checkbox" id="btn-modo">
-                <span class="slider"></span>
-            </label>
-        </div>
-        <div id="user-display" class="user-info"></div>
-        <img src="img/logo.png" alt="Logo de InsuWave" class="logo" width="200" />
-        <nav class="hamburguesa">
-            <button class="nav-toggle" aria-label="Abrir menú">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Página Principal</a></li>
-                <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
-                <li><a href="nuestra-historia.html" class="nav-link">Nuestra Historia</a></li>
-                <li><a href="usuarios.html" class="nav-link">Usuarios</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="hero-main">
-        <section class="hero-welcome">
-            <h2 class="hero-title">BIENVENIDOS A LA INNOVACIÓN DEL FUTURO</h2>
-            <p class="hero-subtitle">Transformando la vida de las personas diabéticas con Wave 1.</p>
-        </section>
-
-        <section class="product-showcase">
-            <div class="product-container">
-                <img src="img/boli.png" alt="InsuWave Wave 1" class="img-product">
-                <div class="product-info">
-                    <h3>Wave 1: Precisión y Empatía</h3>
-                    <p>El Wave 1 es el resultado de una búsqueda incansable por mejorar la calidad de vida. No es solo un dispositivo médico, es un asistente inteligente diseñado para eliminar las barreras de la diabetes.</p>
-                    <ul class="innovacion-list">
-                        <li>📱🔗 <strong>Conectividad Total:</strong> Sincronización Bluetooth con tu móvil para un registro automático.</li>
-                        <li>🖥️✨ <strong>Pantalla OLED:</strong> Visualiza tu última dosis y recordatorios al instante.</li>
-                        <li>🌱♻️ <strong>Eco-Friendly:</strong> Cartuchos fabricados con materiales biodegradables.</li>
-                        <li>✋🧩 <strong>Ergonomía Adaptativa:</strong> Fácil de usar para niños y personas con movilidad reducida.</li>
-                    </ul>
+        <div class="header-content">
+            <div class="logo-side">
+                <img src="img/logo.png" alt="Logo" class="logo">
+                <div class="switch-container">
+                    <label class="switch">
+                        <input type="checkbox" id="btn-modo">
+                        <span class="slider"></span>
+                    </label>
                 </div>
             </div>
-        </section>
+            
+            <div class="center-side">
+                <h1>InsuWave</h1>
+                <p>Innovación, Empatía y Seguridad</p>
+            </div>
 
-        <div class="hero-action">
-            <a href="quienes-somos.html" class="button-hero">Descubre quiénes somos</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu-side" id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Pagina Principal</a></li>
+                    <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+                    <li><a href="nuestra-historia.html" class="nav-link">Nuestra Historia</a></li>
+                    <li><a href="usuarios.html" class="nav-link">Usuarios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-container">
+            <div class="hero-text-content">
+                <h2 class="hero-title">Wave 1</h2>
+                <p class="hero-description">
+                    Bienvenidos a la innovación del futuro. El bolígrafo inteligente que calcula tu dosis de insulina automáticamente conectándose a FreeStyle Libre 2.
+                </p>
+                
+                <div class="left-aligned-stack">
+                    <a href="quienes-somos.html" class="button-hero">Descubre quienes somos</a>
+
+                    <div class="team-section">
+                        <h3 class="team-label">Nuestro Equipo</h3>
+                        <div class="team-cards-container">
+                            <div class="team-card">
+                                <img src="img/equipo-luis.png" alt="Luis Rozalén">
+                                <span>Luis Rozalén</span>
+                            </div>
+                            <div class="team-card">
+                                <img src="img/equipo-javier.png" alt="Javier Lacueva">
+                                <span>Javier Lacueva</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <img src="img/boli.gif" alt="Wave 1" class="main-gif">
+            </div>
         </div>
     </main>
 
-    <footer>&copy; 2025 InsuWave. Todos los derechos reservados.</footer>
+    <footer>
+        <p>&copy; 2026 InsuWave. Todos los derechos reservados.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
