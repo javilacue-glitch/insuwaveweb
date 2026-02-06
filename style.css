@@ -24,7 +24,7 @@ header {
 
 .header-content {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1.5fr;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   width: 100%;
 }
@@ -33,6 +33,7 @@ header {
   display: flex;
   align-items: center;
   gap: 20px;
+  justify-self: start;
 }
 
 .logo {
@@ -46,31 +47,32 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  justify-self: center;
 }
 
 .center-side h1 {
   font-size: 32px;
   margin: 0;
-  width: 100%;
+  white-space: nowrap;
 }
 
 .center-side p {
   font-size: 14px;
   margin: 0;
   color: #adb5bd;
-  width: 100%;
+  white-space: nowrap;
 }
 
 .menu-side {
   display: flex;
   justify-content: flex-end;
+  justify-self: end;
 }
 
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
   padding: 0;
   margin: 0;
 }
@@ -79,8 +81,9 @@ header {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 16px;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -330,10 +333,13 @@ body.light-mode .field { background: white; border: 1px solid #ccc; }
 
 @media (max-width: 1024px) {
   header { padding: 15px 20px; }
-  .header-content { grid-template-columns: 1fr auto auto; gap: 10px; }
-  .center-side { order: 2; margin: 10px 0; }
-  .center-side h1 { font-size: 28px; }
-  .menu-toggle { display: flex; grid-column: 3; }
+  .header-content { 
+    display: flex;
+    justify-content: space-between;
+  }
+  .center-side { flex: 1; text-align: center; }
+  .center-side h1 { font-size: 24px; }
+  .menu-toggle { display: flex; }
   .menu-side {
     position: fixed;
     top: 0;
@@ -364,6 +370,7 @@ body.light-mode .field { background: white; border: 1px solid #ccc; }
 
 @media (max-width: 480px) {
   .hero-title { font-size: 2.5rem; }
-  .center-side h1 { font-size: 24px; }
-  .logo { width: 60px; }
+  .center-side h1 { font-size: 20px; }
+  .center-side p { font-size: 11px; }
+  .logo { width: 50px; }
 }
