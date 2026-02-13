@@ -218,33 +218,42 @@ main {
 }
 
 .team-label {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #6366f1;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .team-cards-container {
   display: flex;
-  gap: 25px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .team-card {
   background: rgba(255, 255, 255, 0.08);
-  padding: 12px;
-  border-radius: 15px;
-  width: 140px;
+  padding: 15px;
+  border-radius: 20px;
+  width: 180px;
   text-align: center;
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .team-card img {
   width: 100%;
-  height: 95px;
+  height: 140px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.team-card span {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: white;
 }
 
 .hero-visual {
@@ -268,37 +277,39 @@ model-viewer {
 }
 
 .card {
-  width: 280px;
-  min-height: 260px;
-  padding: 20px;
+  width: 300px;
+  min-height: 280px;
+  padding: 25px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 12px;
-  background: #fff;
+  gap: 15px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   margin: 0 auto;
+  transition: all 0.4s ease;
+  background: #1a1a1a; 
+  border: 1px solid #333;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .card__title {
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 900;
-  color: #333;
+  color: #fff;
 }
 
 .card__content {
-  font-size: 13px;
-  line-height: 18px;
-  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ccc;
 }
 
 .card__form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   width: 100%;
 }
 
@@ -306,21 +317,22 @@ model-viewer {
   width: 100%;
   box-sizing: border-box;
   outline: 0;
-  background: #fff;
-  padding: 0.8em;
+  padding: 12px;
   border-radius: 14px;
-  border: 1px solid #333;
-  color: black;
+  border: 1px solid #444;
+  background: #222;
+  color: white;
 }
 
 .card__form button {
   border: 0;
-  background: #111;
+  background: #6366f1;
   color: #fff;
   padding: 0.8em;
   border-radius: 14px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 #mensaje {
@@ -368,6 +380,26 @@ body.light-mode .team-card span,
 body.light-mode .center-side h1,
 body.light-mode .hero-title { color: #000000 !important; }
 body.light-mode .button-hero { background-color: #000; color: #fff; }
+
+body.light-mode .card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+body.light-mode .card__title {
+  color: #111;
+}
+
+body.light-mode .card__content {
+  color: #444;
+}
+
+body.light-mode .card__form input {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  color: #111;
+}
 
 @media (max-width: 1024px) {
   header { padding: 15px 20px; }
