@@ -349,6 +349,7 @@ body.light-mode .hero-description,
 body.light-mode .team-label, 
 body.light-mode .team-card span, 
 body.light-mode .center-side h1,
+body.light-mode .hero-title,
 body.light-mode #heading { color: #000000 !important; }
 body.light-mode .team-card { background: rgba(0, 0, 0, 0.05); border: 1px solid rgba(0, 0, 0, 0.1); }
 body.light-mode .button-hero { background-color: #000; color: #fff; }
