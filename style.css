@@ -195,7 +195,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px;
+  gap: 55px;
 }
 
 .button-hero {
@@ -209,57 +209,33 @@ main {
   transition: 0.3s;
 }
 
-.team-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-}
-
 .team-label {
-    font-size: 1.8rem;
-    color: #6366f1;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 1.4rem;
+  color: #6366f1;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .team-cards-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 25px;
 }
 
 .team-card {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 15px;
-    border-radius: 20px;
-    width: 160px;
-    text-align: center;
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.team-card:hover {
-    transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px;
+  border-radius: 15px;
+  width: 140px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .team-card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 10px;
-}
-
-.team-card span {
-    display: block;
-    font-weight: bold;
-    font-size: 1rem;
-    color: white;
+  width: 100%;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .hero-visual {
@@ -271,6 +247,14 @@ main {
 .main-gif {
   max-width: 550px;
   width: 100%;
+}
+
+model-viewer {
+  width: 100%;
+  height: 600px;
+  min-width: 450px;
+  outline: none;
+  --poster-color: transparent;
 }
 
 .form-section {
@@ -349,9 +333,7 @@ body.light-mode .hero-description,
 body.light-mode .team-label, 
 body.light-mode .team-card span, 
 body.light-mode .center-side h1,
-body.light-mode .hero-title,
 body.light-mode #heading { color: #000000 !important; }
-body.light-mode .team-card { background: rgba(0, 0, 0, 0.05); border: 1px solid rgba(0, 0, 0, 0.1); }
 body.light-mode .button-hero { background-color: #000; color: #fff; }
 body.light-mode .form-login { background-color: #f0f4f8; border: 1px solid #ddd; }
 body.light-mode .input-field { color: #333; }
@@ -359,7 +341,10 @@ body.light-mode .field { background: white; border: 1px solid #ccc; }
 
 @media (max-width: 1024px) {
   header { padding: 15px 20px; }
-  .header-content { display: flex; justify-content: space-between; }
+  .header-content { 
+    display: flex;
+    justify-content: space-between;
+  }
   .center-side { flex: 1; text-align: center; }
   .center-side h1 { font-size: 24px; }
   .menu-toggle { display: flex; }
@@ -387,6 +372,12 @@ body.light-mode .field { background: white; border: 1px solid #ccc; }
   .left-aligned-stack { align-items: center; }
   .team-cards-container { justify-content: center; flex-wrap: wrap; }
   .hero-visual { justify-content: center; order: -1; }
+  
+  model-viewer {
+    height: 350px;
+    min-width: 100%;
+  }
+  
   .main-gif { max-width: 300px; }
   body { overflow: auto; }
 }
@@ -410,4 +401,30 @@ model-viewer {
   width: 100%;
   height: 100%;
   display: block;
+}
+.user-welcome-bar {
+  background: rgba(99, 102, 241, 0.15);
+  padding: 12px;
+  text-align: center;
+  color: #6366f1;
+  font-family: sans-serif;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.logout-style {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-style:hover {
+  background: #cc0000;
 }

@@ -73,25 +73,25 @@
     </footer>
 
     <script>
-        const btnOjo = document.getElementById('togglePassword');
-        const inputPass = document.getElementById('password');
-
-        if (btnOjo && inputPass) {
-            btnOjo.addEventListener('click', function () {
-                const esPassword = inputPass.getAttribute('type') === 'password';
-                inputPass.setAttribute('type', esPassword ? 'text' : 'password');
-                this.style.opacity = esPassword ? '0.4' : '1';
-            });
-        }
-
         const loginForm = document.getElementById('loginForm');
         if (loginForm) {
             loginForm.addEventListener('submit', function(event) {
                 event.preventDefault(); 
                 const email = document.getElementById('emailLogin').value;
-                const usuario = email.split('@')[0];
-                sessionStorage.setItem('usuarioInsuWave', usuario);
+                const usuario = email.split('@')[0]; 
+                
+                localStorage.setItem('usuarioInsuWave', usuario);
+                
                 window.location.href = 'index.html';
+            });
+        }
+    
+        const btnOjo = document.getElementById('togglePassword');
+        const inputPass = document.getElementById('password');
+        if (btnOjo && inputPass) {
+            btnOjo.addEventListener('click', function () {
+                const esPassword = inputPass.getAttribute('type') === 'password';
+                inputPass.setAttribute('type', esPassword ? 'text' : 'password');
             });
         }
     </script>
