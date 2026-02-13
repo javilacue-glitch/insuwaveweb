@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InsuWave - Innovación en Insulina</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){ emailjs.init("wPGW0aTE-YC3YLbqC"); })();
+    </script>
 </head>
 <body>
     <header>
@@ -80,22 +84,29 @@
                 exposure="1.5"
                 camera-orbit="45deg 75deg 20m"
                 background-color="transparent"
-                --poster-color="transparent"
-                style="width: 100%; height: 550px; outline: none;">
+                --poster-color="transparent">
                 </model-viewer>
-          </div>
-  
-  
-  
+            </div>
         </div>
+
+        <section class="subscription-section">
+            <form class="card" id="contactoFormulario">
+                <span class="card__title">Suscríbete</span>
+                <p class="card__content">Recibe las últimas novedades de InsuWave directamente en tu correo.</p>
+                <div class="card__form">
+                    <input placeholder="Tu Email" type="email" name="email" id="user_email" required>
+                    <button class="sign-up" type="submit">Registrarse</button>
+                </div>
+                <div id="mensaje"></div>
+            </form>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 InsuWave. Todos los derechos reservados.</p>
     </footer>
 
- 
-   <script src="script.js"></script>
-   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </body>
 </html>

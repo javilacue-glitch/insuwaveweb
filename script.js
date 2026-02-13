@@ -1,11 +1,10 @@
 (function() {
-    const toggleButton = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    const toggleButton = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu-container');
 
     if (toggleButton && navMenu) {
         toggleButton.addEventListener('click', function() {
             navMenu.classList.toggle('active');
-            toggleButton.classList.toggle('active');
         });
     }
 })();
@@ -16,17 +15,29 @@ const mensaje = document.getElementById("mensaje");
 if (form) {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
+        
+        const btn = form.querySelector('.sign-up');
+        const originalText = btn.textContent;
+        
+        btn.textContent = "Enviando...";
+        btn.disabled = true;
+
         emailjs.sendForm("automail", "mailplantilla", this)
-        .then(() => {
-            mensaje.style.color = "green";
-            mensaje.textContent = "✅ Correo enviado correctamente!";
-            form.reset();
-        })
-        .catch((error) => {
-            mensaje.style.color = "red";
-            mensaje.textContent = "❌ Error al enviar el correo.";
-            console.error("Error EmailJS:", error);
-        });
+            .then(() => {
+                mensaje.style.color = "#28a745";
+                mensaje.textContent = "✅ ¡Suscrito con éxito!";
+                form.reset();
+                btn.textContent = originalText;
+                btn.disabled = false;
+                setTimeout(() => { mensaje.textContent = ""; }, 5000);
+            })
+            .catch((error) => {
+                mensaje.style.color = "#dc3545";
+                mensaje.textContent = "❌ Error al enviar.";
+                btn.textContent = "Reintentar";
+                btn.disabled = false;
+                console.error("Error EmailJS:", error);
+            });
     });
 }
 
@@ -44,7 +55,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById("btn-logout").addEventListener("click", function() {
             localStorage.removeItem("usuarioInsuWave");
-            window.location.href = 'index.html'; 
+            window.location.reload(); 
+        });
+    }
+
+    const btnModo = document.getElementById('btn-modo');
+    if(btnModo){
+        btnModo.addEventListener('change', () => {
+            document.body.classList.toggle('light-mode');
         });
     }
 });
