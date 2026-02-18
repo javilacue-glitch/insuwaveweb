@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InsuWave - Innovación en Insulina</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo pagina.png">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
-      (function(){ emailjs.init("wPGW0aTE-YC3YLbqC"); })();
+        (function () { emailjs.init("wPGW0aTE-YC3YLbqC"); })();
     </script>
 </head>
+
 <body>
     <header>
         <div class="header-content">
@@ -22,7 +25,7 @@
                     </label>
                 </div>
             </div>
-            
+
             <div class="center-side">
                 <h1>InsuWave</h1>
                 <p>Innovación, Empatía y Seguridad</p>
@@ -45,15 +48,16 @@
         </div>
     </header>
     <div id="user-display"></div>
-    
+
     <main>
         <div class="hero-container">
             <div class="hero-text-content">
                 <h2 class="hero-title">Wave 1</h2>
                 <p class="hero-description">
-                    Bienvenidos a la innovación del futuro. El bolígrafo inteligente que calcula tu dosis de insulina automáticamente conectándose a FreeStyle Libre 2.
+                    Bienvenidos a la innovación del futuro. El bolígrafo inteligente que calcula tu dosis de insulina
+                    automáticamente conectándose a FreeStyle Libre 2.
                 </p>
-                
+
                 <div class="left-aligned-stack">
                     <a href="quienes-somos.html" class="button-hero">Descubre quienes somos</a>
 
@@ -74,17 +78,9 @@
             </div>
 
             <div class="hero-visual">
-                <model-viewer 
-                src="wave1.glb" 
-                alt="InsuWave Smart Pen" 
-                auto-rotate 
-                camera-controls 
-                shadow-intensity="1"
-                environment-image="neutral"
-                exposure="1.5"
-                camera-orbit="45deg 75deg 20m"
-                background-color="transparent"
-                --poster-color="transparent">
+                <model-viewer src="wave1.glb" alt="InsuWave Smart Pen" auto-rotate camera-controls shadow-intensity="1"
+                    environment-image="neutral" exposure="1.5" camera-orbit="45deg 75deg 20m"
+                    background-color="transparent" --poster-color="transparent">
                 </model-viewer>
             </div>
         </div>
@@ -109,4 +105,5 @@
     <script src="script.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </body>
+
 </html>
