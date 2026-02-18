@@ -1,9 +1,9 @@
-(function() {
+(function () {
     const toggleButton = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu-container');
 
     if (toggleButton && navMenu) {
-        toggleButton.addEventListener('click', function() {
+        toggleButton.addEventListener('click', function () {
             navMenu.classList.toggle('active');
         });
     }
@@ -15,10 +15,10 @@ const mensaje = document.getElementById("mensaje");
 if (form) {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-        
+
         const btn = form.querySelector('.sign-up');
         const originalText = btn.textContent;
-        
+
         btn.textContent = "Enviando...";
         btn.disabled = true;
 
@@ -41,7 +41,7 @@ if (form) {
     });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const usuarioActivo = localStorage.getItem("usuarioInsuWave");
     const display = document.getElementById("user-display");
 
@@ -53,16 +53,22 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
         `;
 
-        document.getElementById("btn-logout").addEventListener("click", function() {
+        document.getElementById("btn-logout").addEventListener("click", function () {
             localStorage.removeItem("usuarioInsuWave");
-            window.location.reload(); 
+            window.location.reload();
         });
     }
 
     const btnModo = document.getElementById('btn-modo');
-    if(btnModo){
+    if (btnModo) {
+        // Restaurar el modo guardado
+        if (localStorage.getItem('modoClaro') === 'true') {
+            document.body.classList.add('light-mode');
+            btnModo.checked = true;
+        }
         btnModo.addEventListener('change', () => {
             document.body.classList.toggle('light-mode');
+            localStorage.setItem('modoClaro', document.body.classList.contains('light-mode'));
         });
     }
 });
