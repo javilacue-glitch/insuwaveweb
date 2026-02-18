@@ -1,0 +1,684 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f0f4f8;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #3d3838;
+  padding: 10px 50px;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-side {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-self: start;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+.center-side {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
+
+.center-side h1 {
+  font-size: 32px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.center-side p {
+  font-size: 14px;
+  margin: 0;
+  color: #adb5bd;
+  white-space: nowrap;
+}
+
+.menu-side {
+  display: flex;
+  justify-content: flex-end;
+  justify-self: end;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #6366f1;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  font-size: 12px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111;
+  border: 1px solid #444;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.27em;
+  bottom: 0.25em;
+  background-color: #adb5bd;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #ffffff;
+}
+
+input:checked+.slider:before {
+  transform: translateX(1.4em);
+  background-color: #111111;
+}
+
+main {
+  flex: 1;
+  padding: 0 80px;
+  background-image: url("img/fondo1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: block;
+  overflow-y: auto;
+}
+
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1450px;
+  margin: auto;
+  min-height: auto;
+  padding: 40px 0;
+}
+
+.hero-text-content {
+  max-width: 600px;
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 5.5rem;
+  font-weight: 900;
+  color: #6366f1;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin: 25px 0 45px 0;
+}
+
+.left-aligned-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 55px;
+}
+
+.button-hero {
+  padding: 18px 45px;
+  background-color: #6366f1;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.team-section {
+  width: 100%;
+}
+
+.team-label {
+  font-size: 1.6rem;
+  color: #6366f1;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.team-cards-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px;
+  border-radius: 20px;
+  width: 180px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.team-card span {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 450px;
+}
+
+model-viewer {
+  width: 100%;
+  height: 550px;
+  outline: none;
+}
+
+.subscription-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  width: 100%;
+}
+
+#contactoFormulario.card {
+  width: 300px;
+  min-height: 280px;
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 20px;
+  margin: 0 auto;
+  transition: all 0.4s ease;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#contactoFormulario .card__title {
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+}
+
+#contactoFormulario .card__content {
+  font-size: 14px;
+  line-height: 20px;
+  color: #ccc;
+}
+
+#contactoFormulario .card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+#contactoFormulario .card__form input {
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #444;
+  background: #222;
+  color: white;
+}
+
+#contactoFormulario .card__form button {
+  border: 0;
+  background: #6366f1;
+  color: #fff;
+  padding: 0.8em;
+  border-radius: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.login-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  padding: 5px 15px;
+  width: fit-content;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  color: black;
+}
+
+.input-group i {
+  color: #555;
+}
+
+.btn-entrar {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  max-width: 1200px;
+  transition: 0.3s;
+}
+
+#mensaje {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 380px;
+  padding: 2em 2em 1.5em;
+  background-color: #171717;
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+}
+
+.form-login:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+.form-login #heading {
+  text-align: center;
+  margin: 0.8em 0 0.4em;
+  color: #ffffff;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.form-login .field {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  padding: 0.7em 1em;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.form-login .input-icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: white;
+  flex-shrink: 0;
+}
+
+.form-login .input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+  font-size: 0.95em;
+}
+
+.form-login .eye-icon {
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.1em;
+}
+
+footer {
+  text-align: center;
+  background-color: #3d3838;
+  color: white;
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.user-welcome-bar {
+  background: rgba(99, 102, 241, 0.15);
+  padding: 12px;
+  text-align: center;
+  color: #6366f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.logout-style {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #111;
+}
+
+body.light-mode main {
+  background-image: url("img/fondoblanco.jpg") !important;
+}
+
+body.light-mode header,
+body.light-mode footer {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+body.light-mode .nav-link,
+body.light-mode .hero-description,
+body.light-mode .team-label,
+body.light-mode .team-card span,
+body.light-mode .center-side h1,
+body.light-mode .login-container h2 {
+  color: #000000 !important;
+}
+
+body.light-mode .button-hero {
+  background-color: #000;
+  color: #fff;
+}
+
+body.light-mode #contactoFormulario.card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode #contactoFormulario .card__title {
+  color: #111;
+}
+
+body.light-mode #contactoFormulario .card__content {
+  color: #444;
+}
+
+body.light-mode #contactoFormulario .card__form input {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  color: #111;
+}
+
+
+body.light-mode .form-login {
+  background-color: #f0f0f0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+body.light-mode .form-login #heading {
+  color: #111 !important;
+}
+
+body.light-mode .form-login .field {
+  background-color: #e4e4e4;
+  box-shadow: inset 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .form-login .input-icon {
+  fill: #333;
+}
+
+body.light-mode .form-login .input-field {
+  color: #111;
+}
+
+body.light-mode .form-login .input-field::placeholder {
+  color: #777;
+}
+
+body.light-mode .center-side p {
+  color: #555 !important;
+}
+
+body.light-mode .user-welcome-bar {
+  color: #333;
+}
+
+body.light-mode .menu-toggle span {
+  background-color: #111;
+}
+
+body.light-mode .menu-side {
+  background-color: #e0e0e0;
+}
+
+body.light-mode .menu-side .nav-link {
+  color: #111;
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-side {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: #2b2727;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    z-index: 1050;
+  }
+
+  .menu-side.active {
+    right: 0;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .left-aligned-stack {
+    align-items: center;
+  }
+
+  .team-cards-container {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    justify-content: center;
+    min-width: 100%;
+    order: -1;
+  }
+
+  model-viewer {
+    height: 350px;
+  }
+
+  .login-container {
+    align-items: center;
+  }
+
+  .input-group input {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  #contactoFormulario.card {
+    width: 90%;
+  }
+}

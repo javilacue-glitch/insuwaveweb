@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsuWave - Innovación en Insulina</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){ emailjs.init("wPGW0aTE-YC3YLbqC"); })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-side">
+                <img src="img/logo.png" alt="Logo" class="logo">
+                <div class="switch-container">
+                    <label class="switch">
+                        <input type="checkbox" id="btn-modo">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="center-side">
+                <h1>InsuWave</h1>
+                <p>Innovación, Empatía y Seguridad</p>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu-side" id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Pagina Principal</a></li>
+                    <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+                    <li><a href="nuestra-historia.html" class="nav-link">Nuestra Historia</a></li>
+                    <li><a href="usuarios.html" class="nav-link">Usuarios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="user-display"></div>
+    
+    <main>
+        <div class="hero-container">
+            <div class="hero-text-content">
+                <h2 class="hero-title">Wave 1</h2>
+                <p class="hero-description">
+                    Bienvenidos a la innovación del futuro. El bolígrafo inteligente que calcula tu dosis de insulina automáticamente conectándose a FreeStyle Libre 2.
+                </p>
+                
+                <div class="left-aligned-stack">
+                    <a href="quienes-somos.html" class="button-hero">Descubre quienes somos</a>
+
+                    <div class="team-section">
+                        <h3 class="team-label">Nuestro Equipo</h3>
+                        <div class="team-cards-container">
+                            <div class="team-card">
+                                <img src="img/luisrozalen.png" alt="Luis Rozalén">
+                                <span>Luis Rozalén</span>
+                            </div>
+                            <div class="team-card">
+                                <img src="img/javierlacueva.png" alt="Javier Lacueva">
+                                <span>Javier Lacueva</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <model-viewer 
+                src="wave1.glb" 
+                alt="InsuWave Smart Pen" 
+                auto-rotate 
+                camera-controls 
+                shadow-intensity="1"
+                environment-image="neutral"
+                exposure="1.5"
+                camera-orbit="45deg 75deg 20m"
+                background-color="transparent"
+                --poster-color="transparent">
+                </model-viewer>
+            </div>
+        </div>
+
+        <section class="subscription-section">
+            <form class="card" id="contactoFormulario">
+                <span class="card__title">Suscríbete</span>
+                <p class="card__content">Recibe las últimas novedades de InsuWave directamente en tu correo.</p>
+                <div class="card__form">
+                    <input placeholder="Tu Email" type="email" name="email" id="user_email" required>
+                    <button class="sign-up" type="submit">Registrarse</button>
+                </div>
+                <div id="mensaje"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 InsuWave. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</body>
+</html>
