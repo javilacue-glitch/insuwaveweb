@@ -70,7 +70,8 @@
                     </svg>
                     <input id="password" placeholder="Contraseña" class="input-field" type="password" name="password"
                         required>
-                    <span id="togglePassword" class="eye-icon">👁️</span>
+                    <span id="togglePassword" class="eye-icon"><img src="img/ojo cerrado.png" alt="Ver"
+                            style="width: 20px; height: 20px; vertical-align: middle;"></span>
                 </div>
 
                 <button class="button-hero" type="submit"
@@ -103,6 +104,7 @@
             btnOjo.addEventListener('click', function () {
                 const esPassword = inputPass.getAttribute('type') === 'password';
                 inputPass.setAttribute('type', esPassword ? 'text' : 'password');
+                btnOjo.innerHTML = esPassword ? '👁️' : '<img src="img/ojo cerrado.png" alt="Ocultar" style="width: 20px; height: 20px; vertical-align: middle;">';
             });
         }
     </script>
