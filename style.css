@@ -1,4 +1,4 @@
-html, 
+html,
 body {
   height: 100%;
   margin: 0;
@@ -147,11 +147,11 @@ header {
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #ffffff;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   transform: translateX(1.4em);
   background-color: #111111;
 }
@@ -290,9 +290,9 @@ model-viewer {
   border-radius: 20px;
   margin: 0 auto;
   transition: all 0.4s ease;
-  background: #1a1a1a; 
+  background: #1a1a1a;
   border: 1px solid #333;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 #contactoFormulario .card__title {
@@ -428,30 +428,109 @@ footer {
   font-weight: bold;
 }
 
-body.light-mode { background-color: #ffffff; }
-body.light-mode main { background-image: url("img/fondoblanco.jpg") !important; }
-body.light-mode header, body.light-mode footer { background-color: #e0e0e0; color: #000; }
-body.light-mode .nav-link, 
-body.light-mode .hero-description, 
-body.light-mode .team-label, 
-body.light-mode .team-card span, 
-body.light-mode .center-side h1,
-body.light-mode .hero-title,
-body.light-mode .login-container h2 { color: #000000 !important; }
-body.light-mode .button-hero { background-color: #000; color: #fff; }
+body.light-mode {
+  background-color: #ffffff;
+}
 
-body.light-mode #contactoFormulario.card {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+body.light-mode main {
+  background-image: url("img/fondoblanco.jpg") !important;
+}
+
+body.light-mode header,
+body.light-mode footer {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+/* Readability improvements for all text in light mode */
+body.light-mode,
+body.light-mode p,
+body.light-mode span:not(.slider),
+body.light-mode li,
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6 {
+  color: #1a1a1a !important;
+}
+
+/* Preserve accent color for strong tags, specific labels, and hero title */
+body.light-mode strong,
+body.light-mode .miembro strong,
+body.light-mode .team-label,
+body.light-mode .hero-title {
+  color: #6366f1 !important;
+}
+
+body.light-mode .nav-link {
+  color: #000000 !important;
+}
+
+body.light-mode .nav-link:hover {
+  color: #6366f1 !important;
+}
+
+body.light-mode .button-hero {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Support for transparent sections and cards in light mode */
+body.light-mode #contactoFormulario.card,
+body.light-mode .about-content,
+body.light-mode #solucion {
+  background: #ffffff !important;
+  border: 1px solid #ddd !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-mode .miembro {
+  background: rgba(99, 102, 241, 0.05) !important;
+  border: 1px solid #6366f1 !important;
+}
+
+/* Login Form Light Mode Overrides */
+body.light-mode .form {
+  background-color: #ffffff !important;
+  border: 1px solid #ddd !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-mode .form #heading {
+  color: #1a1a1a !important;
+}
+
+body.light-mode .field {
+  background-color: #f9f9f9 !important;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.05) !important;
+  color: #1a1a1a !important;
+}
+
+body.light-mode .input-icon {
+  fill: #1a1a1a !important;
+}
+
+body.light-mode .input-field {
+  color: #1a1a1a !important;
+}
+
+body.light-mode .button1 {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+body.light-mode .button1:hover {
+  background-color: #000000 !important;
 }
 
 body.light-mode #contactoFormulario .card__title {
-  color: #111;
+  color: #111 !important;
 }
 
 body.light-mode #contactoFormulario .card__content {
-  color: #444;
+  color: #444 !important;
 }
 
 body.light-mode #contactoFormulario .card__form input {
@@ -461,9 +540,19 @@ body.light-mode #contactoFormulario .card__form input {
 }
 
 @media (max-width: 1024px) {
-  header { padding: 15px 20px; }
-  .header-content { display: flex; justify-content: space-between; }
-  .menu-toggle { display: flex; }
+  header {
+    padding: 15px 20px;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
   .menu-side {
     position: fixed;
     top: 0;
@@ -477,21 +566,158 @@ body.light-mode #contactoFormulario .card__form input {
     transition: 0.4s;
     z-index: 1050;
   }
-  .menu-side.active { right: 0; }
-  .nav-menu { flex-direction: column; align-items: center; gap: 30px; }
-  main { padding: 20px; }
-  .hero-container { flex-direction: column; text-align: center; gap: 40px; }
-  .hero-title { font-size: 3.5rem; }
-  .left-aligned-stack { align-items: center; }
-  .team-cards-container { justify-content: center; }
-  .hero-visual { justify-content: center; min-width: 100%; order: -1; }
-  model-viewer { height: 350px; }
-  .login-container { align-items: center; }
-  .input-group input { width: 100%; max-width: 300px; }
+
+  .menu-side.active {
+    right: 0;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .left-aligned-stack {
+    align-items: center;
+  }
+
+  .team-cards-container {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    justify-content: center;
+    min-width: 100%;
+    order: -1;
+  }
+
+  model-viewer {
+    height: 350px;
+  }
+
+  .login-container {
+    align-items: center;
+  }
+
+  .input-group input {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 480px) {
-  .hero-title { font-size: 2.5rem; }
-  .logo { width: 50px; }
-  #contactoFormulario.card { width: 90%; }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  #contactoFormulario.card {
+    width: 90%;
+  }
+}
+
+/* From Uiverse.io by Praashoo7 */
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px);
+  /* Ajuste basado en header/footer */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 2em;
+  background-color: #171717;
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form:hover {
+  transform: scale(1.05);
+  border: 1px solid black;
+}
+
+#heading {
+  text-align: center;
+  margin: 2em;
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: white;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+}
+
+.form .btn {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2.5em;
+}
+
+.button1 {
+  padding: 0.5em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  border-radius: 5px;
+  margin-right: 0.5em;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+.button1:hover {
+  background-color: black;
+  color: white;
 }
