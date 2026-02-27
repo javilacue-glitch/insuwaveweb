@@ -257,6 +257,22 @@ main {
   color: white;
 }
 
+.team-card small {
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.miembro:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.25);
+}
+
 .hero-visual {
   flex: 1;
   display: flex;
@@ -403,8 +419,10 @@ footer {
   text-align: center;
   background-color: #3d3838;
   color: white;
-  padding: 15px 0;
-  font-size: 20px;
+  padding: 30px 20px;
+  font-size: 15px;
+  border-top: 3px solid #6366f1;
+  letter-spacing: 0.5px;
 }
 
 .user-welcome-bar {
@@ -442,7 +460,22 @@ body.light-mode footer {
   color: #000;
 }
 
-/* Readability improvements for all text in light mode */
+@media (max-width: 1024px) {
+  body.light-mode .menu-side {
+    background-color: #f0f0f0 !important;
+    border-left: 1px solid #ddd;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  body.light-mode .nav-link {
+    color: #1a1a1a !important;
+  }
+
+  body.light-mode .nav-link:hover {
+    color: #6366f1 !important;
+  }
+}
+
 body.light-mode,
 body.light-mode p,
 body.light-mode span:not(.slider),
@@ -456,7 +489,7 @@ body.light-mode h6 {
   color: #1a1a1a !important;
 }
 
-/* Preserve accent color for strong tags, specific labels, and hero title */
+
 body.light-mode strong,
 body.light-mode .miembro strong,
 body.light-mode .team-label,
@@ -477,7 +510,7 @@ body.light-mode .button-hero {
   color: #fff;
 }
 
-/* Support for transparent sections and cards in light mode */
+
 body.light-mode #contactoFormulario.card,
 body.light-mode .about-content,
 body.light-mode #solucion {
@@ -491,7 +524,11 @@ body.light-mode .miembro {
   border: 1px solid #6366f1 !important;
 }
 
-/* Login Form Light Mode Overrides */
+body.light-mode .team-card small {
+  color: rgba(0, 0, 0, 0.55) !important;
+}
+
+
 body.light-mode .form {
   background-color: #ffffff !important;
   border: 1px solid #ddd !important;
@@ -633,13 +670,13 @@ body.light-mode #contactoFormulario .card__form input {
   }
 }
 
-/* From Uiverse.io by Praashoo7 */
+
 .form-section {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 150px);
-  /* Ajuste basado en header/footer */
+  
   padding: 20px;
   box-sizing: border-box;
 }
