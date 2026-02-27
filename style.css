@@ -419,7 +419,7 @@ footer {
   text-align: center;
   background-color: #3d3838;
   color: white;
-  padding: 30px 20px;
+  padding: 20px 20px;
   font-size: 15px;
   border-top: 3px solid #6366f1;
   letter-spacing: 0.5px;
@@ -513,7 +513,8 @@ body.light-mode .button-hero {
 
 body.light-mode #contactoFormulario.card,
 body.light-mode .about-content,
-body.light-mode #solucion {
+body.light-mode #solucion,
+body.light-mode #ganadores {
   background: #ffffff !important;
   border: 1px solid #ddd !important;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
@@ -676,7 +677,7 @@ body.light-mode #contactoFormulario .card__form input {
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 150px);
-  
+
   padding: 20px;
   box-sizing: border-box;
 }
