@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const btnModo = document.getElementById('btn-modo');
     if (btnModo) {
-        // Restaurar el modo guardado
+        
         if (localStorage.getItem('modoClaro') === 'true') {
             document.body.classList.add('light-mode');
             btnModo.checked = true;
