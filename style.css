@@ -108,12 +108,13 @@ header {
   transition: 0.3s;
 }
 
+/* Botón claro y oscuro */
 .switch {
+  font-size: 14px; 
   position: relative;
   display: inline-block;
   width: 3.5em;
   height: 2em;
-  font-size: 12px;
 }
 
 .switch input {
@@ -123,16 +124,17 @@ header {
 }
 
 .slider {
+  --background: #1a1a1a;
   position: absolute;
   cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #111111;
-  border: 1px solid #444;
-  transition: .4s;
+  background-color: var(--background);
+  transition: .5s;
   border-radius: 30px;
+  border: 1px solid #444;
 }
 
 .slider:before {
@@ -140,11 +142,13 @@ header {
   content: "";
   height: 1.4em;
   width: 1.4em;
-  border-radius: 20px;
-  left: 0.27em;
-  bottom: 0.25em;
-  background-color: #adb5bd;
-  transition: .4s;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  /* Efecto Luna */
+  box-shadow: inset 8px -4px 0px 0px #fff; 
+  background: var(--background);
+  transition: .5s;
 }
 
 input:checked+.slider {
@@ -152,9 +156,12 @@ input:checked+.slider {
 }
 
 input:checked+.slider:before {
-  transform: translateX(1.4em);
-  background-color: #111111;
+  transform: translateX(100%);
+  /* Efecto Sol */
+  box-shadow: inset 15px -4px 0px 15px #ffce54;
 }
+
+/* FIN BOTON CLARO Y OSCURO */
 
 main {
   flex: 1;
@@ -213,6 +220,8 @@ main {
   font-size: 20px;
   transition: 0.3s;
 }
+
+/* IMAGENES Y TEXTO DEL EQUIPO */
 
 .team-section {
   width: 100%;
@@ -280,6 +289,8 @@ main {
   min-width: 450px;
 }
 
+/* MODELO 3D BOLÍGRAFO INSULINA */
+
 model-viewer {
   width: 100%;
   height: 550px;
@@ -292,6 +303,8 @@ model-viewer {
   padding: 60px 0;
   width: 100%;
 }
+
+/* FORMULARIO REGISTRO CORREO */
 
 #contactoFormulario.card {
   width: 300px;
@@ -352,6 +365,8 @@ model-viewer {
   transition: 0.3s;
 }
 
+/* FORMULARIO INICIO DE SESIÓN */
+
 .login-container {
   display: flex;
   flex-direction: column;
@@ -409,6 +424,8 @@ model-viewer {
   transition: 0.3s;
 }
 
+/* MENSAJE AL INTRODUCIR CORREO ELECTRÓNICO */
+
 #mensaje {
   margin-top: 10px;
   font-size: 14px;
@@ -421,9 +438,10 @@ footer {
   color: white;
   padding: 20px 20px;
   font-size: 15px;
-  border-top: 3px solid #6366f1;
   letter-spacing: 0.5px;
 }
+
+/* INICIO DE SESIÓN DE USUARIO */
 
 .user-welcome-bar {
   background: rgba(99, 102, 241, 0.15);
@@ -436,6 +454,8 @@ footer {
   gap: 20px;
 }
 
+/* CERRAR SESIÓN USUARIO */
+
 .logout-style {
   background: #ff4d4d;
   color: white;
@@ -445,6 +465,8 @@ footer {
   cursor: pointer;
   font-weight: bold;
 }
+
+/* ESTILOS DE FONDO CLARO Y OSCURO */
 
 body.light-mode {
   background-color: #ffffff;
@@ -576,6 +598,9 @@ body.light-mode #contactoFormulario .card__form input {
   border: 1px solid #ccc;
   color: #111;
 }
+
+/* FIN FONDO CLARO Y OSCURO */
+
 
 @media (max-width: 1024px) {
   header {

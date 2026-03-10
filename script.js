@@ -1,3 +1,5 @@
+/* MENÚ DE HAMBURGUESA PARA VERSIÓN MÓVILES O PEQUEÑO */
+
 (function () {
     const toggleButton = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu-container');
@@ -8,6 +10,8 @@
         });
     }
 })();
+
+/* FORMULARIO CORREO ELECTRÓNICO */
 
 const form = document.getElementById("contactoFormulario");
 const mensaje = document.getElementById("mensaje");
@@ -41,6 +45,8 @@ if (form) {
     });
 }
 
+/* INICIO DE SESIÓN EN LOCALSTORAGE */
+
 document.addEventListener("DOMContentLoaded", function () {
     const usuarioActivo = localStorage.getItem("usuarioInsuWave");
     const display = document.getElementById("user-display");
@@ -58,6 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.reload();
         });
     }
+
+    /* BOTÓN CLARO Y OSCURO */
 
     const btnModo = document.getElementById('btn-modo');
     const logoImg = document.getElementById('logo-img');
