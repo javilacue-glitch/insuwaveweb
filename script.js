@@ -60,15 +60,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const btnModo = document.getElementById('btn-modo');
-    if (btnModo) {
+    const logoImg = document.getElementById('logo-img');
+
+    if (btnModo && logoImg) {
         
+        const actualizarLogo = () => {
+            if (document.body.classList.contains('light-mode')) {
+                logoImg.src = 'img/logo.png'; // Logo para fondo claro
+            } else {
+                logoImg.src = 'img/logo claro.png'; // Logo para fondo oscuro
+            }
+        };
+
         if (localStorage.getItem('modoClaro') === 'true') {
             document.body.classList.add('light-mode');
             btnModo.checked = true;
+            actualizarLogo();
         }
         btnModo.addEventListener('change', () => {
             document.body.classList.toggle('light-mode');
             localStorage.setItem('modoClaro', document.body.classList.contains('light-mode'));
+            actualizarLogo();
         });
     }
 });
